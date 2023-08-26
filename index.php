@@ -1,130 +1,215 @@
 <?php get_header(); ?>
-<div class="topimage"></div>
-<main class="main-container">
-
-  <section class="contents fade-in fade-in-up" id="sec1-watercolor">
-    <div class="contents-inner">
-      <h2 class="title">WATERCOLOR</h2>
-      <h3 class="caption">
-        <a href="watercolor.html">Gallery</a>
-      </h3>
-      <div class="sec1-gallery">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/watercolor-book.jpg" alt="watercolor-book">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/watercolor-earth.jpg" alt="watercolor-earth">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/watercolor-seadragon.jpg" alt="watercolor-seadragon">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/watercolor-batterfly.jpg" alt="watercolor-batterfly">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/watercolor-eggplant.jpg" alt="watercolor-eggplant">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/watercolor-animal.jpg" alt="watercolor-animal">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/watercolor-sunflower.jpg" alt="watercolor-sunflower">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/watercoloricecream.jpg" alt="watercoloricecream">
+<div class="topimage">
+  <div class="fv-center flex-c center">
+    <div class="flex-r w-60">
+      <a href="#contact">
+        <div class="fv_btn contact_btn">
+          <p>CONTACT</p>
+        </div>
+      </a>
+      <div class="fv_btn">
+        <p>CV</p>
       </div>
     </div>
-  </section>
-
-  <section class="contents fade-in fade-in-up" id="sec2-travel">
-    <div class="contents-inner">
-      <h2 class="title">TRAVEL</h2>
-      <h3 class="caption">
-        <a href="<?php echo esc_url(home_url('/')); ?>travel">My Journey</a>
-      </h3>
-      <div class="sec2-swiper">
-        <ul class="slider" id="js-slider">
-          <li>
-            <div class="slide-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/imgtravel1.jpg" alt="imgtravel1">
-            </div>
-          </li>
-          <li>
-            <div class="slide-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/imgtravel2.jpg" alt="imgtravel2">
-            </div>
-          </li>
-          <li>
-            <div class="slide-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/imgtravel3.jpg" alt="imgtravel3">
-            </div>
-          </li>
-          <li>
-            <div class="slide-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/imgtravel4.jpg" alt="imgtravel4">
-            </div>
-          </li>
-          <li>
-            <div class="slide-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/imgtravel5.jpg" alt="imgtravel5">
-            </div>
-          </li>
-          <li>
-            <div class="slide-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/imgtravel6.jpg" alt="imgtravel6">
-            </div>
-          </li>
-        </ul>
-        <div class="dots"></div>
-      </div>
+    <div class="fv-font flex-r">
+      <p>Design.</p>
+      <p>Develop.</p>
     </div>
-  </section>
-
-  <section class="contents fade-in fade-in-up" id="sec3-ecoactivity">
-    <div class="contents-inner">
-      <h2 class="title">ECOACT</h2>
-      <h3 class="caption">
-        <a href="<?php echo esc_url(home_url('/')); ?>ecoact">More Info</a>
-      </h3>
-      <div class="paragraph">
-        <div class="paragraph_en">
-          <h4 class="sub-caption">Mother Earth<br>Beach Clean</h4>
-          <p class="txt_en">There are 8 million tonnes of plastic waste in the world's oceans annually. I organize the beach
-            clean-up activity to enjoy the beauty of ocean!
+  </div>
+</div>
+<div class="main-container">
+  <section id="aboutme" class="fade-in">
+    <div class="contents-inner flex-r">
+      <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/aboutme.png" alt=""></div>
+      <div class="w-60">
+        <p class="txt_en font-26 font-w-600">About me</p>
+        <p class="txt_en font-38 font-w-700 mb-2">
+          I’m Kumiko, a UI/UX Designer and<br>
+          Web Developer
+        </p>
+        <div class="flex-r desc">
+          <p class="txt_en w-58">Starting from goal-setting for problem-solving, I utilize a wide range of skills to provide total support for web projects.I have extensive experience in creating and refurbishing various types of websites, including corporate sites and service sites.In design production, I consistently represent the brand image and build a strong visual identity.</p>
+          <p class="paragraph_jp">
+            幅広いスキルを駆使し、課題とゴール設定から、Webプロジェクトをトータルサポートします。コーポレートサイトやサービスサイトなど、さまざまなタイプのWebサイトの制作と改修を行っています。デザイン制作においては、 ブランドイメージを一貫して表現し強力なビジュアルアイデンティティを構築します。
           </p>
         </div>
-        <div class="paragraph_jp">
-          <h4 class="sub-caption_jp">
-            マザーアース<br>
-            <span class="second-line_sub-caption_jp">ビーチクリーン活動</span><br>
-          </h4>
-          <p class="txt_jp">世界中で年間<span class="text-combine">800</span>万トンの海洋ごみが発生していると言われています。
-            いつまでも大好きな海を綺麗に保つためにビーチクリーン活動を始めました。</p>
-        </div>
       </div>
-      <figure class="sec3_img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/beachcleantopimg.jpg" alt="beachcleantopimg">
-      </figure>
     </div>
   </section>
-
-  <section class="contents fade-in fade-in-up" id="sec4-about">
+  <section id="skill" class="fade-in">
+    <div class="contents-inner flex-r">
+      <div class="w-46">
+        <div class="mb-22">
+          <p class="txt_en font-38 font-w-700">My Specialization</p>
+          <p>提供できるもの</p>
+        </div>
+        <div>
+          <ul class="flex-r">
+            <li id="skill-card_design" class="flex-c card center">
+              <div>
+                <p class="txt_en font-w-700">Web Design</p>
+                <p class="txt_en font-w-700">UI/UX Design</p>
+              </div>
+              <div class="card-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-design.png" alt=""></div>
+            </li>
+            <li id="skill-card_develop" class="flex-c card center">
+              <div>
+                <p class="txt_en font-w-700">Development</p>
+              </div>
+              <div class="card-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-development.png" alt=""></div>
+            </li>
+            <li id="" class="flex-c card center">
+              <div>
+                <p class="txt_en font-w-700">SEO/</p>
+                <p class="txt_en font-w-700">Marketing</p>
+              </div>
+              <div class="card-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-marketing.png" alt=""></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="w-42">
+        <div class="mb-10">
+          <p class="txt_en font-38 font-w-700">Skill Set</p>
+          <p>スキル</p>
+        </div>
+        <div>
+          <ul class="flex-r border-b a-center t-center">
+            <li>
+              <div>
+                <p class="txt_en font-w-700">Web Design</p>
+                <p class="txt_en font-w-700">UI/UX Design</p>
+              </div>
+            </li>
+            <li>
+              <p class="txt_en font-w-700">Development</p>
+            </li>
+            <li>
+              <div>
+                <p class="txt_en font-w-700">SEO/</p>
+                <p class="txt_en font-w-700">Marketing</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="design-skill-set" class="mt-4">
+          <ul class="flex-r">
+            <li class="flex-c center">
+              <div class="flex-c center">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-figma.png" alt="">
+              </div>
+              <p>Figma</p>
+            </li>
+            <li class="flex-c center">
+              <div class="flex-c center">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-ps.png" alt="">
+              </div>
+              <p>Photoshop</p>
+            </li>
+            <li class="flex-c center">
+              <div class="flex-c center">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-ai.png" alt="">
+              </div>
+              <p>Illustrator</p>
+            </li>
+            <li class="flex-c center">
+              <div class="flex-c center">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-xd.png" alt="">
+              </div>
+              <p>XD</p>
+            </li>
+          </ul>
+        </div>
+        <div id="develop-skill-set">
+          <ul class="grid">
+            <li>
+              <p class="txt_en font-w-700">Html5/Css3</p>
+              <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill1.png" alt=""></div>
+            </li>
+            <li>
+              <p class="txt_en font-w-700">jQuery</p>
+              <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill1.png" alt=""></div>
+            </li>
+            <li>
+              <p class="txt_en font-w-700">PHP</p>
+              <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill2.png" alt=""></div>
+            </li>
+            <li>
+              <p class="txt_en font-w-700">JavaScipt</p>
+              <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill3.png" alt=""></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="project" class="fade-in">
     <div class="contents-inner">
-      <h2 class="title">ABOUT</h2>
-      <h3 class="caption">
-        <a href="<?php echo esc_url(home_url('/')); ?>work">Works</a>
-      </h3>
-      <div class="sec4-flex">
-        <div clas="about_image">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-image2.jpg" alt="aboutimage">
+      <div class="mb-10">
+        <p class="txt_en font-38 font-w-700">Recent Project</p>
+        <p>最新のプロジェクト</p>
+      </div>
+      <div>
+        <ul class="grid">
+          <?php
+          $args = array(
+            'post_type' => 'post',
+            'posts_per_page' => 3
+          ); ?>
+
+          <?php $my_query = new WP_Query($args); ?>
+
+          <?php while ($my_query->have_posts()) : $my_query->the_post();
+            $cat = get_the_category();
+            $cat_name = $cat[0]->cat_name;
+            $cat_slug = $cat[0]->slug;
+          ?>
+
+            <a href="<?php the_permalink(); ?>">
+              <div class="item">
+                <div class="item-img">
+                  <?php the_post_thumbnail(); ?>
+                </div>
+
+                <div class="item-info">
+                  <div class="cat-icon">
+                    <p><?php echo $cat_name; ?></p>
+                  </div>
+                  <div class="ttl">
+                    <p><?php the_title(); ?></p>
+                  </div>
+                  <div class="companyname">
+                  </div>
+                </div>
+              </div>
+            </a>
+          <?php endwhile; ?>
+      </div>
+      <a href="<?php echo home_url(); ?>/work">
+        <div class="more-btn">
+          <p>VIEW MORE</p>
         </div>
-        <div class="info">
-          <h4 class="name_en">
-            Kumiko Sugawa
-          </h4>
-          <h5 class="name_jp">
-            須川 公美子
-          </h5>
-          <p class="txt_en">
-            Born in 1993. I am a Web designer and also watercolor
-            illustrator based in Yokohama,Japan. Dedicated spirit of adventure. Organize beach clean activity on my own.</p>
-          <div class="paragraph_jp">
-            <p class="txt_jp info-txt_jp">
-              <span class="text-combine">1993</span>年生まれ。横浜在住。趣味で水彩画を手掛けていたこともあり、ウェブデザイナーのお仕事に魅了され、学校でウェブデザイン制作を勉強しました。趣味はコーヒーを淹れたり、旅行に行くことです。海が大好きで、自身でビーチクリーン活動も行っています。
-            </p>
-          </div>
+      </a>
+      </ul>
+    </div>
+  </section>
+  <section id="contact" class="fade-in">
+    <div class="contents-inner">
+    <div class="mb-10 t-center">
+        <p class="txt_en font-38 font-w-700">Contact</p>
+        <p>お問い合わせ</p>
+      </div>
+      <div class="flex-r">
+        <div>
+          <p>お気軽にご連絡ください。</p>
+        </div>
+        <div>
+          <form>
+            <?php echo apply_shortcodes('[contact-form-7 id="078730a" title="コンタクトフォーム 1"]'); ?>
+          </form>
         </div>
       </div>
     </div>
   </section>
-
-  <div class='cursor' id="cursor"></div>
-  <div class='cursor2' id="cursor2"></div>
-  <div class='cursor3' id="cursor3"></div>
-</main>
+</div>
 <?php get_footer(); ?>

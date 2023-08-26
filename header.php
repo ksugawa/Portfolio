@@ -30,14 +30,11 @@
 <body id="<?php echo get_post_field('post_name', get_post()); ?>">
     <header class="header-container">
         <div class="sitetitle">
-            <h1 class="header-logo"><a href="<?php echo esc_url(home_url('/')); ?>">KUMIKO SUGAWA</a></h1>
             <nav class="menu collapse">
                 <ul>
-                    <li><a href="<?php echo esc_url(home_url('/')); ?>watercolor/">WATERCOLOR</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/')); ?>travel/">TRAVEL</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/')); ?>ecoact/">ECOACT</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/')); ?>about/">ABOUT</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/')); ?>">ABOUT</a></li>
                     <li><a href="<?php echo esc_url(home_url('/')); ?>work/">WORK</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/')); ?>other/">OTHER</a></li>
                 </ul>
             </nav>
             <div class="navbtn"><span></span><span></span><span></span></div>

@@ -1,4 +1,11 @@
 <?php
+/* ---------- サムネイル画像　設定 ---------- */
+function setup_theme() {
+    add_theme_support('post-thumbnails');
+}
+add_action('after_setup_theme', 'setup_theme');
+
+
 /* ---------- 「投稿」の表記変更 ---------- */
 
 function post_has_archive($args, $post_type)
