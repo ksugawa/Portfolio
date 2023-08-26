@@ -1,0 +1,10 @@
+# 画像ファイルを無視
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.ico
+*.svg
+*.webp
