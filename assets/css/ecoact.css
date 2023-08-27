@@ -1,0 +1,32 @@
+/*================================
+ecoact-body 
+================================*/
+.paragraph-inner {
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 10px;
+}
+
+.item1 {
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+.item4 {
+    width: 53%;
+}
+
+.intro {
+    text-align: left;
+    line-height: 1;
+}
+
+.sub-caption2 {
+    text-align: center;
+}
+
+.act-txt_en {
+    width: 50%;
+}

@@ -68,12 +68,11 @@
           </ul>
         </div>
       </div>
-      <div class="w-42">
+      <div id="skill-set" class="w-42">
         <div class="mb-10">
           <p class="txt_en font-38 font-w-700">Skill Set</p>
           <p>スキル</p>
         </div>
-        <div>
           <ul class="flex-r border-b a-center t-center">
             <li>
               <div>
@@ -91,7 +90,6 @@
               </div>
             </li>
           </ul>
-        </div>
         <div id="design-skill-set" class="mt-4">
           <ul class="flex-r">
             <li class="flex-c center">
@@ -131,12 +129,12 @@
               <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill1.png" alt=""></div>
             </li>
             <li>
-              <p class="txt_en font-w-700">PHP</p>
-              <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill2.png" alt=""></div>
-            </li>
-            <li>
               <p class="txt_en font-w-700">JavaScipt</p>
               <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill3.png" alt=""></div>
+            </li>
+            <li>
+              <p class="txt_en font-w-700">PHP</p>
+              <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill2.png" alt=""></div>
             </li>
           </ul>
         </div>

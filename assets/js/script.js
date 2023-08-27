@@ -67,20 +67,7 @@ $("#switch").on('click', function () {
   }
 });
 
-document.addEventListener('DOMContentLoaded', function() { // ページ読み込み時に実行
-  let header = document.querySelector('header');
-  let topImage = document.querySelector('.topimage');
-  let mainContainer = document.querySelector('.main-container');
 
-  window.addEventListener('scroll', function() {
-    // topImageの下端とheaderの下端の位置を比較
-    if (window.pageYOffset + header.offsetHeight > topImage.offsetTop + topImage.offsetHeight) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  });
-});
 
 
 

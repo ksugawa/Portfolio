@@ -11,14 +11,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Sans+Pro:wght@200;600&display=swap">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet" type="text/css">
-    <script src="https://kit.fontawesome.com/bd26051799.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
     <!-- ページ専用css -->
 
-    <?php if (is_page('about')) : ?>
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/about.css?<?php echo (date('YmdHis')); ?>" />
+    <?php if (is_page('ecoact')) : ?>
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/ecoact.css?<?php echo (date('YmdHis')); ?>" />
+    <?php endif; ?>
+
+    <?php if (is_page('other')) : ?>
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/other.css?<?php echo (date('YmdHis')); ?>" />
     <?php endif; ?>
 
     <!--/ ページ専用css -->
