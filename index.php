@@ -182,7 +182,6 @@
               </div>
             </a>
           <?php endwhile; ?>
-      </div>
       <a href="<?php echo home_url(); ?>/work">
         <div class="more-btn">
           <p>VIEW MORE</p>
