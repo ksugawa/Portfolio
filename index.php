@@ -46,24 +46,24 @@
         <div>
           <ul class="flex-r">
             <li id="skill-card_design" class="flex-c card center">
+              <div class="card-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-design.png" alt=""></div>
               <div>
                 <p class="txt_en font-w-700">Web Design</p>
                 <p class="txt_en font-w-700">UI/UX Design</p>
               </div>
-              <div class="card-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-design.png" alt=""></div>
             </li>
             <li id="skill-card_develop" class="flex-c card center">
+              <div class="card-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-development.png" alt=""></div>
               <div>
                 <p class="txt_en font-w-700">Development</p>
               </div>
-              <div class="card-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-development.png" alt=""></div>
             </li>
             <li id="" class="flex-c card center">
+              <div class="card-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-marketing.png" alt=""></div>
               <div>
                 <p class="txt_en font-w-700">SEO/</p>
                 <p class="txt_en font-w-700">Marketing</p>
               </div>
-              <div class="card-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-marketing.png" alt=""></div>
             </li>
           </ul>
         </div>
@@ -143,7 +143,7 @@
   </section>
   <section id="project" class="fade-in">
     <div class="contents-inner">
-      <div class="mb-10">
+      <div class="mb-4">
         <p class="txt_en font-38 font-w-700">Recent Project</p>
         <p>最新のプロジェクト</p>
       </div>
@@ -192,7 +192,7 @@
   </section>
   <section id="contact" class="fade-in">
     <div class="contents-inner">
-    <div class="mb-10 t-center">
+    <div class="mb-4 t-center">
         <p class="txt_en font-38 font-w-700">Contact</p>
         <p>お問い合わせ</p>
       </div>

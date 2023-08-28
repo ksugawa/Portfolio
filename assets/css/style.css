@@ -310,8 +310,6 @@ home-body
   letter-spacing: 0.8px;
 }
 
-
-
 .main-container a {
   color: #333;
   position: relative;
@@ -349,12 +347,29 @@ home-body
   overflow: hidden;
 }
 
+#aboutme img {
+  position: relative;
+}
+
+#aboutme img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 506px;
+  background: linear-gradient(180deg, #F5E5C2 0%, rgba(251, 217, 39, 0.00) 82.29%, #FAFAFA 98.44%);
+  filter: blur(100px);
+  width: 506px;
+  height: 378.615px;
+  z-index: -2;
+}
+
 /*skill
 ================================*/
 #skill .card {
   width: 31%;
   padding: 10% 0;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border-radius: 8px;
   border: 1px solid #CCC;
@@ -370,16 +385,19 @@ home-body
   border: 1px solid #BEAB8E;
 }
 
+#skill .card:nth-child(2) p {
+  padding: 0.5em 0;
+}
+
 #skill-set>ul>li {
   cursor: pointer;
 }
 
 .card-icon {
-  margin-top: 14%;
-}
-
-li:nth-child(2n) .card-icon {
-  margin-top: 26%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
 }
 
 .border-b {
@@ -789,12 +807,6 @@ work-body
     height: 690px;
   }
 
-  #aboutme img {
-    width: 74%;
-    position: absolute;
-    bottom: -33%;
-  }
-
   #design-skill-set li div {
     padding-left: 12%;
     padding-right: 12%;
@@ -902,10 +914,6 @@ work-body
 
   #aboutme {
     height: 920px;
-  }
-
-  #aboutme img {
-    bottom: 0;
   }
 
   #aboutme .desc {
