@@ -39,30 +39,50 @@
   <section id="skill" class="fade-in">
     <div class="contents-inner flex-r">
       <div class="w-46">
-        <div class="mb-22">
+        <div class="mb-10">
           <p class="txt_en font-38 font-w-700">My Specialization</p>
           <p>提供できるもの</p>
         </div>
         <div>
           <ul class="flex-r">
-            <li id="skill-card_design" class="flex-c card center">
-              <div class="card-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-design.png" alt=""></div>
-              <div>
-                <p class="txt_en font-w-700">Web Design</p>
-                <p class="txt_en font-w-700">UI/UX Design</p>
+            <li id="skill-card_design" class="card">
+              <div class="flex-c center card-front">
+                <div class="card-icon">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-design.svg" alt="">
+                </div>
+                <div>
+                  <p class="txt_en font-w-700">Web Design</p>
+                  <p class="txt_en font-w-700">UI/UX Design</p>
+                </div>
+              </div>
+              <div class="flex-c center card-inner">
+                <p class="txt_en font-w-700 font-48">12</p>
+                <p class="txt_en font-w-700">Project</p>
               </div>
             </li>
-            <li id="skill-card_develop" class="flex-c card center">
-              <div class="card-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-development.png" alt=""></div>
-              <div>
-                <p class="txt_en font-w-700">Development</p>
+            <li id="skill-card_develop" class="card">
+              <div class="flex-c center card-front">
+                <div class="card-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-development.svg" alt=""></div>
+                <div>
+                  <p class="txt_en font-w-700">Development</p>
+                </div>
+              </div>
+              <div class="flex-c center card-inner">
+                <p class="txt_en font-w-700 font-48">10</p>
+                <p class="txt_en font-w-700">Project</p>
               </div>
             </li>
-            <li id="" class="flex-c card center">
-              <div class="card-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-marketing.png" alt=""></div>
-              <div>
-                <p class="txt_en font-w-700">SEO/</p>
-                <p class="txt_en font-w-700">Marketing</p>
+            <li id="skill-card_marketing" class="card">
+              <div class="flex-c center card-front">
+                <div class="card-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-marketing.svg" alt=""></div>
+                <div>
+                  <p class="txt_en font-w-700">SEO/</p>
+                  <p class="txt_en font-w-700">Marketing</p>
+                </div>
+              </div>
+              <div class="flex-c center card-inner">
+                <p class="txt_en font-w-700 font-48">4</p>
+                <p class="txt_en font-w-700">Project</p>
               </div>
             </li>
           </ul>
@@ -73,23 +93,23 @@
           <p class="txt_en font-38 font-w-700">Skill Set</p>
           <p>スキル</p>
         </div>
-          <ul class="flex-r border-b a-center t-center">
-            <li>
-              <div>
-                <p class="txt_en font-w-700">Web Design</p>
-                <p class="txt_en font-w-700">UI/UX Design</p>
-              </div>
-            </li>
-            <li>
-              <p class="txt_en font-w-700">Development</p>
-            </li>
-            <li>
-              <div>
-                <p class="txt_en font-w-700">SEO/</p>
-                <p class="txt_en font-w-700">Marketing</p>
-              </div>
-            </li>
-          </ul>
+        <ul class="flex-r border-b a-center t-center">
+          <li id="skill-set-design">
+            <div>
+              <p class="txt_en font-w-700">Web Design</p>
+              <p class="txt_en font-w-700">UI/UX Design</p>
+            </div>
+          </li>
+          <li id="skill-set-develop">
+            <p class="txt_en font-w-700">Development</p>
+          </li>
+          <li>
+            <div>
+              <p class="txt_en font-w-700">SEO/</p>
+              <p class="txt_en font-w-700">Marketing</p>
+            </div>
+          </li>
+        </ul>
         <div id="design-skill-set" class="mt-4">
           <ul class="flex-r">
             <li class="flex-c center">
@@ -122,19 +142,19 @@
           <ul class="grid">
             <li>
               <p class="txt_en font-w-700">Html5/Css3</p>
-              <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill1.png" alt=""></div>
+              <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill1.svg" alt=""></div>
             </li>
             <li>
               <p class="txt_en font-w-700">jQuery</p>
-              <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill1.png" alt=""></div>
+              <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill1.svg" alt=""></div>
             </li>
             <li>
               <p class="txt_en font-w-700">JavaScipt</p>
-              <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill3.png" alt=""></div>
+              <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill3.svg" alt=""></div>
             </li>
             <li>
               <p class="txt_en font-w-700">PHP</p>
-              <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill2.png" alt=""></div>
+              <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill2.svg" alt=""></div>
             </li>
           </ul>
         </div>
@@ -182,23 +202,39 @@
               </div>
             </a>
           <?php endwhile; ?>
-      <a href="<?php echo home_url(); ?>/work">
-        <div class="more-btn">
-          <p>VIEW MORE</p>
-        </div>
-      </a>
-      </ul>
-    </div>
+        </ul>
+        <a href="<?php echo home_url(); ?>/work">
+          <div class="more-btn">
+            <p>VIEW MORE</p>
+          </div>
+        </a>
+      </div>
   </section>
   <section id="contact" class="fade-in">
-    <div class="contents-inner">
-    <div class="mb-4 t-center">
-        <p class="txt_en font-38 font-w-700">Contact</p>
-        <p>お問い合わせ</p>
-      </div>
+    <div class="contents-inner flex-c">
       <div class="flex-r">
-        <div>
-          <p>お気軽にご連絡ください。</p>
+        <div class="contact-left">
+          <div class="mb-4 contact-head">
+            <p class="txt_en font-40 font-w-700">Contact</p>
+            <p>お問い合わせ</p>
+          </div>
+          <div>
+            <p>制作の依頼・ご相談などお気軽に<br>お問い合わせください。</p>
+          </div>
+          <div>
+            <ul class="sns-icon-list flex-r">
+              <li>
+                <a href="https://github.com/ksugawa">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-github.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/ksugawa">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-linkedin.svg" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div>
           <form>
