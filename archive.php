@@ -7,25 +7,31 @@
             <h3 class="caption">Work</h3>
             <div class="work-lists">
 
-                <?php if (have_posts()) : ?>
-                    <?php while (have_posts()) : the_post();
-                        $cat = get_the_category();
-                        $cat = $cat[0];
-                    ?>
-                    <div class="work-item">
-                        <a href="<?php the_permalink(); ?>">
+                <?php
+                $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 9,
+                    'order' => 'DESC'
+                );
+                $the_query = new WP_Query($args);
+                ?>
+
+                <?php if ($the_query->have_posts()) : ?>
+                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                        <div class="work-item">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail(); ?>
                                 <div class="ttl">
                                     <div class="txt">
                                         <p class="tag"><?php echo $cat->cat_name; ?></p>
                                         <p class="day"><?php echo get_the_date(); ?></p>
                                     </div>
-                                    <h4><?php the_title(); ?></h4>
                                 </div>
-                                <?php the_post_thumbnail(); ?>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
                     <?php endwhile; ?>
                 <?php endif; ?>
+                <?php wp_reset_postdata(); ?>
             </div>
         </section>
     </div>
