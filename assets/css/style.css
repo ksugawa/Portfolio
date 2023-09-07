@@ -50,9 +50,9 @@ header.scrolled .sitetitle {
 }
 
 section {
-  width: 86%;
-  margin: 6% auto;
-  padding: 0 4%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6% 0;
 }
 
 a {
@@ -89,6 +89,10 @@ a {
 /* -! flex */
 
 /* font */
+h3 {
+  font-size: 2em;
+}
+
 .t-center {
   text-align: center;
 }
@@ -239,7 +243,7 @@ footer
   font-weight: 400;
   background: #ddddda;
   text-align: center;
-  padding: 2% 0;
+  padding: 1% 0;
   font-size: 13px;
 }
 
@@ -503,11 +507,13 @@ project
 /*================================
 contact
 ================================*/
+section#contact {
+  max-width: 100vw;
+  margin: 0;
+}
 
 #contact {
   margin-bottom: 0;
-  width: 100%;
-  padding: 6% 0;
   background: url(../images/contact-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -535,7 +541,7 @@ contact
   flex-wrap: nowrap;
 }
 
-#contact .contents-inner .flex-r .contact-left{
+#contact .contents-inner .flex-r .contact-left {
   color: #fafafa;
 }
 
@@ -619,24 +625,20 @@ travel-body
 work-body 
 ================================*/
 .work-lists {
-  max-width: 1040px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  column-gap: 30px;
 }
 
 .work-item {
-  max-width: 50%;
   margin-top: 50px;
-  padding-right: 30px;
-  padding-left: 30px;
+}
+
+.ttl {
+  padding-top: 5px;
 }
 
 .txt {
-  margin-top: 15px;
   display: flex;
   font-size: 12px;
 }
@@ -681,18 +683,8 @@ work-body
 
 @media screen and (max-width:1023px) {
 
-  .main-container {
-    padding: 0 4%;
-  }
-
   #aboutme>.flex-r {
     flex-direction: column-reverse;
-  }
-
-  section {
-    margin: 0 auto;
-    padding: 14% 0;
-    width: 100%;
   }
 
   .w-60,
@@ -712,6 +704,10 @@ work-body
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.05rem;
+  }
+
+  section {
+    padding: 10% 4%;
   }
 
   .mb-22 {
@@ -921,32 +917,6 @@ work-body
     text-align: center;
   }
 
-  .footer-container a {
-    color: #717171;
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-    font-size: 30px;
-  }
-
-  .footer-container a::after {
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: #717171;
-    transform: scale(0, 1);
-    transform-origin: right top;
-    transition: transform .3s;
-  }
-
-  .footer-container a:hover::after {
-    transform-origin: left top;
-    transform: scale(1, 1);
-  }
-
   /*================================
     watercolor-body 
   ================================*/
@@ -987,6 +957,10 @@ work-body
 
   .txt {
     padding: 1px 0;
+  }
+
+  #contact .contents-inner .flex-r {
+    flex-wrap: wrap;
   }
 
 }
