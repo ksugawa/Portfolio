@@ -197,6 +197,7 @@
                     <p><?php the_title(); ?></p>
                   </div>
                   <div class="companyname">
+                    <p><?php the_field('company-name'); ?></p>
                   </div>
                 </div>
               </div>
