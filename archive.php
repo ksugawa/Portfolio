@@ -3,37 +3,34 @@
 <main class="page-main">
     <div class="main-container">
 
-        <section class="section-inner">
-            <h3 class="caption">Work</h3>
-            <div class="work-lists">
+        <span class="caption">Work</span>
+        <div class="work-lists">
 
-                <?php
-                $args = array(
-                    'post_type' => 'post',
-                    'posts_per_page' => 9,
-                    'order' => 'DESC'
-                );
-                $the_query = new WP_Query($args);
+            <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post();
+                    $cat = get_the_category();
+                    $cat = $cat[0];
                 ?>
 
-                <?php if ($the_query->have_posts()) : ?>
-                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                        <div class="work-item">
-                            <a href="<?php the_permalink(); ?>">
+                    <div class="work-item">
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="work-item__img">
                                 <?php the_post_thumbnail(); ?>
-                                <div class="ttl">
-                                    <div class="txt">
-                                        <p class="tag"><?php echo $cat->cat_name; ?></p>
-                                        <p class="day"><?php echo get_the_date(); ?></p>
-                                    </div>
+                            </div>
+                            <div class="ttl">
+                                <div class="txt">
+                                    <p class="tag"><?php echo $cat->cat_name; ?></p>
+                                    <p class="day"><?php echo get_the_date(); ?></p>
                                 </div>
-                            </a>
-                        </div>
-                    <?php endwhile; ?>
-                <?php endif; ?>
-                <?php wp_reset_postdata(); ?>
-            </div>
-        </section>
+                            </div>
+                            <div class="ttlCol">
+                                <h2><?php the_title(); ?></h2>
+                            </div>
+                        </a>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
     </div>
 </main>
 <?php get_footer(); ?>
