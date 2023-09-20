@@ -17,7 +17,7 @@
     </div>
   </div>
 </div>
-<div class="main-container">
+<main class="main-container">
   <section id="aboutme" class="fade-in">
     <div class="contents-inner flex-r">
       <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/aboutme.png" alt=""></div>
@@ -245,5 +245,5 @@
       </div>
     </div>
   </section>
-</div>
+</main>
 <?php get_footer(); ?>
