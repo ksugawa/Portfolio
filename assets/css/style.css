@@ -1,14 +1,27 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html *,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+
 :root {
   --page-bg: #fff;
   --font-black: #262626;
   --font-e-playfair: 'Playfair Display', serif;
-  --font-e-source: 'Source Sans Pro', sans-serif;
+  --font-e-source: 'Source Sans 3', sans-serif;
   --border-b: 1px solid #CCC;
 }
 
@@ -17,7 +30,7 @@ body {
   background-color: var(--page-bg);
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.05rem;
   word-break: break-all;
 }
@@ -41,7 +54,9 @@ figure {
 
 header {
   width: 100%;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 100;
 }
 
@@ -49,7 +64,8 @@ header.scrolled .sitetitle {
   color: #232323;
 }
 
-section {
+section,
+.page-main {
   max-width: 1100px;
   margin: 0 auto;
   padding: 6% 0;
@@ -89,6 +105,16 @@ a {
 /* -! flex */
 
 /* font */
+h1,
+h2,
+h3 {
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 18px;
+}
+
 h3 {
   font-size: 2em;
 }
@@ -146,13 +172,9 @@ h3 {
 /* sitetitle */
 .sitetitle {
   display: flex;
-  position: fixed;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   color: #fff;
-  top: 0px;
-  left: 0px;
-  right: 0px;
   width: 100%;
   height: 60px;
   background-attachment: scroll;
@@ -199,7 +221,7 @@ h3 {
 .menu li {
   display: inline;
   padding: 0 15px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   font-weight: 300;
   font-size: 18px;
   line-height: 1em;
@@ -214,8 +236,18 @@ h3 {
   line-height: 1.5;
 }
 
+.page-head {
+  width: 86%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 13% 0 7%;
+  align-items: flex-start;
+  justify-content: flex-start;
+  line-height: 1.5;
+}
 
-
+/* wide */
 .w-42 {
   width: 42%;
 }
@@ -231,6 +263,8 @@ h3 {
 .w-60 {
   width: 60%;
 }
+
+/* -! wide */
 
 /*================================
 footer
@@ -310,6 +344,10 @@ home-body
   line-height: normal;
   letter-spacing: 0.8px;
   gap: 5rem;
+}
+
+.main-container {
+  overflow: hidden;
 }
 
 .main-container a {
@@ -504,6 +542,11 @@ project
   object-fit: cover;
 }
 
+.companyname {
+  color: #adb5bd;
+  font-size: 13px;
+}
+
 /*================================
 contact
 ================================*/
@@ -596,6 +639,38 @@ input[type="submit"] {
 }
 
 /*================================
+single-page 
+================================*/
+article {
+  width: 60vw;
+  margin: 0 auto;
+  padding: 5vw 0;
+  min-width: 840px;
+  line-height: 2;
+}
+
+.single-contents {
+  margin: 10% 0;
+  padding-left: 7vw;
+  padding-right: 7vw;
+}
+
+article h2 {
+  font-size: max(1.5625rem, 18px);
+  font-weight: 500;
+  margin: 2% 0;
+}
+
+.item-info__url {
+  margin: 2% 0;
+}
+
+/*================================
+page 
+================================*/
+
+
+/*================================
 watercolor-body 
 ================================*/
 #watercolor p {
@@ -626,12 +701,24 @@ work-body
 ================================*/
 .work-lists {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  column-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
 }
 
 .work-item {
+  width: calc(100% - 50px);
   margin-top: 50px;
+}
+
+.work-item:nth-child(2n) {
+  margin-top: 100px;
+}
+
+.work-item__img {
+  width: 100%;
+  aspect-ratio: 3 / 1.5;
+  position: relative;
+  overflow: hidden;
 }
 
 .ttl {
@@ -643,9 +730,17 @@ work-body
   font-size: 12px;
 }
 
-.tag {
+.txt p {
+  padding-top: 6px;
+}
+
+.txt p.tag {
   position: relative;
   padding-right: 16px;
+}
+
+.tag {
+  position: relative;
 }
 
 .tag::before {
@@ -658,7 +753,7 @@ work-body
   top: calc(50% - 5px)
 }
 
-.day {
+.txt p.day {
   padding-left: 16px;
 }
 
@@ -706,7 +801,8 @@ work-body
     letter-spacing: 0.05rem;
   }
 
-  section {
+  section,
+  .page-main {
     padding: 10% 4%;
   }
 
@@ -942,9 +1038,15 @@ work-body
   /*================================
     work-body 
   ================================*/
+
   .work-lists {
+    grid-template-columns: 100% 1fr;
     padding-right: 5px;
     padding-left: 5px;
+  }
+
+  .work-item {
+    width: 100%;
   }
 
   .lists {
@@ -966,6 +1068,10 @@ work-body
 }
 
 @media screen and (max-width: 500px) {
+
+  body {
+    font-size: 14px;
+  }
 
   .w-58 {
     width: 100%;
