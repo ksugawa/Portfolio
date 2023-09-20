@@ -10,23 +10,11 @@ $(function () { // スライダー
   });
 });
 
-$(function () {  // navボタン
-  $(".navbtn").click(function () { 
-    $(this).toggleClass('active');
-    $(".menu").toggleClass('panelactive');
-    $("main,footer").toggleClass('mainblur');
-  });
-
-  $(".menu a").click(function () {
-    $(".navbtn").removeClass('active');
-    $(".menu").removeClass('panelactive');
-    $("main,footer").removeClass('mainblur');
-  });
+document.querySelector('.navbtn').addEventListener('click', function () {
+  document.querySelector('.navbtn').classList.toggle('active');
+  document.querySelector('.menu').classList.toggle('panelactive');
 });
 
-$(function () { //各スキルカードを選択した際に表示するスキルセットを変える
-  document.getElementById('skill-card_develop').addEventListener('click', function() {
-    // Developのdivを表示
     document.getElementById('develop-skill-set').style.display = 'block';
     // Designのdivを非表示
     document.getElementById('design-skill-set').style.display = 'none';
