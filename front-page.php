@@ -238,9 +238,7 @@
           </div>
         </div>
         <div>
-          <form>
-            <?php echo apply_shortcodes('[contact-form-7 id="078730a" title="コンタクトフォーム 1"]'); ?>
-          </form>
+          <?php get_template_part('template-parts/form'); ?>
         </div>
       </div>
     </div>
