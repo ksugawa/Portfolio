@@ -15,33 +15,31 @@ document.querySelector('.navbtn').addEventListener('click', function () {
   document.querySelector('.menu').classList.toggle('panelactive');
 });
 
-    document.getElementById('develop-skill-set').style.display = 'block';
-    // Designのdivを非表示
-    document.getElementById('design-skill-set').style.display = 'none';
-  });
-  
-  document.getElementById('skill-card_design').addEventListener('click', function() {
-    // Developのdivを非表示
-    document.getElementById('develop-skill-set').style.display = 'none';
-    // Designのdivを表示
-    document.getElementById('design-skill-set').style.display = 'block';
-  });  
+document.getElementById('skill-card_develop').addEventListener('click', function () {
+
+  document.getElementById('develop-skill-set').style.display = 'block';
+
+  document.getElementById('design-skill-set').style.display = 'none';
 });
 
-$(function () { //各スキルセットリストを選択した際に表示するスキルセットを変える
-  document.getElementById('skill-set-develop').addEventListener('click', function() {
-    // Developのdivを表示
-    document.getElementById('develop-skill-set').style.display = 'block';
-    // Designのdivを非表示
-    document.getElementById('design-skill-set').style.display = 'none';
-  });
-  
-  document.getElementById('skill-set-design').addEventListener('click', function() {
-    // Developのdivを非表示
-    document.getElementById('develop-skill-set').style.display = 'none';
-    // Designのdivを表示
-    document.getElementById('design-skill-set').style.display = 'block';
-  });  
+document.getElementById('skill-card_design').addEventListener('click', function () {
+
+  document.getElementById('develop-skill-set').style.display = 'none';
+
+  document.getElementById('design-skill-set').style.display = 'block';
+});
+document.getElementById('skill-set-develop').addEventListener('click', function () {
+
+  document.getElementById('develop-skill-set').style.display = 'block';
+
+  document.getElementById('design-skill-set').style.display = 'none';
+});
+
+document.getElementById('skill-set-design').addEventListener('click', function () {
+
+  document.getElementById('develop-skill-set').style.display = 'none';
+
+  document.getElementById('design-skill-set').style.display = 'block';
 });
 
 let fadeInTarget = document.querySelectorAll('.fade-in');
@@ -73,14 +71,14 @@ $("#switch").on('click', function () {
 
 $(function() {
   $('a[href^="#"]').click(function() { //ページ内スクロール
-      var speed = 500;
-      var href = $(this).attr("href");
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top - 100;
-      $("html, body").animate({
-          scrollTop: position
-      }, speed, "swing");
-      return false;
+    var speed = 500;
+    var href = $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top - 100;
+    $("html, body").animate({
+      scrollTop: position
+    }, speed, "swing");
+    return false;
   });
 });
 
