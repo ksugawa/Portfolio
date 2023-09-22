@@ -177,22 +177,16 @@
 
           <?php $my_query = new WP_Query($args); ?>
 
-          <?php while ($my_query->have_posts()) : $my_query->the_post();
-            $cat = get_the_category();
-            $cat_name = $cat[0]->cat_name;
-            $cat_slug = $cat[0]->slug;
-          ?>
+          <?php while ($my_query->have_posts()) : $my_query->the_post();?>
 
             <a href="<?php the_permalink(); ?>">
               <div class="item">
                 <div class="item-img">
                   <?php the_post_thumbnail(); ?>
                 </div>
+                <div class="overlay"></div>
 
                 <div class="item-info">
-                  <div class="cat-icon">
-                    <p><?php echo $cat_name; ?></p>
-                  </div>
                   <div class="ttl">
                     <p><?php the_title(); ?></p>
                   </div>
