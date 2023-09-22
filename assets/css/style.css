@@ -581,7 +581,7 @@ section#contact {
   justify-content: flex-start;
 }
 
-#contact .contents-inner > .flex-r {
+#contact .contents-inner>.flex-r {
   flex-wrap: nowrap;
   justify-content: center;
 }
@@ -590,7 +590,7 @@ section#contact {
   color: #fafafa;
 }
 
-#contact .contents-inner .flex-r > div {
+#contact .contents-inner .flex-r>div {
   width: 46%
 }
 
@@ -630,15 +630,57 @@ textarea::-webkit-input-placeholder {
   color: #FAFAFA;
 }
 
-input[type="submit"] {
+.formbtn {
+  position: relative;
+  width: 178px;
+  height: 40px;
   margin: 4% auto 0;
-  width: 125px;
   display: block;
-  padding: 6px 30px;
-  border-radius: 99px;
-  border: 1px solid #FAFAFA;
-  background: #FAFAFA;
-  box-shadow: 4px 4px 25px 0px rgba(196, 196, 196, 0.25);
+  border-radius: 30px;
+  border: 2px solid #fafafa;
+  background-color: transparent;
+  transition: all .3s;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.formbtn:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5,
+    inset -4px -4px 12px #fafafa;
+}
+
+.btn-txt {
+  z-index: 1;
+  font-weight: 800;
+  color: #fafafa;
+  letter-spacing: .2em;
+}
+
+.type1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: #333;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+}
+
+.formbtn:hover {
+  box-shadow: 1px 1px 200px #252525;
+  color: #fff;
+  border: none;
+}
+
+.type1:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
 }
 
 /*================================
