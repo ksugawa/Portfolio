@@ -69,8 +69,8 @@ $("#switch").on('click', function () {
   }
 });
 
-$(function() {
-  $('a[href^="#"]').click(function() { //ページ内スクロール
+$(function () {
+  $('a[href^="#"]').click(function () { //ページ内スクロール
     var speed = 500;
     var href = $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
