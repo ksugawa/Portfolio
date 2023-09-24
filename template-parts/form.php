@@ -1,15 +1,19 @@
+<form action="<?php echo esc_url(home_url('/')); ?>thanks/" method="post" id="form">
+    <div class="form-control">
+        <label for="username"></label>
+        <input type="text" id="username" size="40" placeholder="お名前" name="name" value="" required />
+        <small>Error message</small>
+    </div>
+    <div class="form-control">
+        <label for="email" class="form-control"></label>
+        <input type="email" id="email" size="40" placeholder="メールアドレス" name="email" value="" required />
+        <small>Error message</small>
+    </div>
+    <div class="form-control">
+        <label for="message" class="form-control"></label>
+        <textarea cols="40" rows="8" id="message" placeholder="お問い合わせ内容" name="message"></textarea>
 
-
-<form action="<?php echo esc_url(home_url('/')); ?>thanks/" method="post">
-    <label>
-        <input type="text" size="40" placeholder="お名前" name="name" value="" required />
-    </label>
-    <label>
-        <input type="email" size="40" placeholder="メールアドレス" name="email" value="" required />
-    </label>
-    <label>
-        <textarea cols="40" rows="8" placeholder="お問い合わせ内容" name="message"></textarea>
-    </label>
+    </div>
     <button type="submit" class="formbtn type1">
         <span class="btn-txt">送信する</span>
     </button>
