@@ -17,6 +17,10 @@ document.querySelector('.navbtn').addEventListener('click', function () {
   document.querySelector('.menu').classList.toggle('panelactive');
 });
 
+document.querySelector('.menu a').addEventListener('click', function () {
+  element.classList.remove('panelactive');
+});
+
 // スキルカードアニメーション
 document.getElementById('skill-card_develop').addEventListener('click', function () {
 
