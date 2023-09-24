@@ -12,14 +12,25 @@ $(function () {
 });
 
 // ナビゲーションボタンアニメーション
-document.querySelector('.navbtn').addEventListener('click', function () {
-  document.querySelector('.navbtn').classList.toggle('active');
-  document.querySelector('.menu').classList.toggle('panelactive');
+const navbtn = document.querySelector('navbtn');
+const menu = document.querySelector('.menu');
+
+navbtn.addEventListener('click', toggleMenu);
+
+function toggleMenu() {
+  navbtn.classList.toggle('active');
+  menu.classList.toggle('panelactive');
+}
+
+const menuLinks = document.querySelectorAll('.menu a');
+
+menuLinks.forEach((link) => {
+  link.addEventListener('click', removePanelActive);
 });
 
-document.querySelector('.menu a').addEventListener('click', function () {
-  element.classList.remove('panelactive');
-});
+function removePanelActive() {
+  menu.classList.remove('panelactive');
+}
 
 // スキルカードアニメーション
 document.getElementById('skill-card_develop').addEventListener('click', function () {
