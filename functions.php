@@ -8,7 +8,6 @@ add_action('after_setup_theme', 'setup_theme');
 
 
 /* ---------- 「投稿」の表記変更 ---------- */
-
 function post_has_archive($args, $post_type)
 {
     if ('post' == $post_type) {
@@ -21,7 +20,6 @@ function post_has_archive($args, $post_type)
 add_filter('register_post_type_args', 'post_has_archive', 10, 2);
 
 /* ---------- カスタム投稿タイプを追加 ---------- */
-
 function create_post_type()
 {
 
@@ -67,4 +65,25 @@ function create_post_type()
 }
 add_action('init', 'create_post_type');
 
+/* ---------- メールフォームの実装 ---------- */
+function form_init() {
+    if ( is_home() ) {
+        return;
+    }
+
+    if (isset($_POST['name'])){
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $message = &$_POST['message'];
+
+        $to = "sugawakumiko.biz@gmail.com";
+        $subject = "お問合せがありました";
+        $body = "お名前 : \n{$name}\n";
+                "メールアドレス : \n{$email}\n";
+                "お問合せ内容 : \n{$message}\n";
+        $fromname = "ポートフォリオサイト 須川 公美子";
+        $from = "sugawakumiko.biz@gmail.com";
+        $header = "From: {$fromname} <{$from}>\r\n";
+    }
+}
 ?>

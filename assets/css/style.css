@@ -23,6 +23,8 @@ html *,
   --font-e-playfair: 'Playfair Display', serif;
   --font-e-source: 'Source Sans 3', sans-serif;
   --border-b: 1px solid #CCC;
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
 }
 
 body {
@@ -69,6 +71,10 @@ section,
   max-width: 1100px;
   margin: 0 auto;
   padding: 6% 0;
+}
+
+section:first-child {
+  padding-top: 0;
 }
 
 a {
@@ -269,7 +275,12 @@ h3 {
 /*================================
 footer
 ================================*/
-/* footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 .footer-container {
   width: 100%;
   margin: 0 auto;
@@ -284,6 +295,13 @@ footer
 /*================================
 home-body 
 ================================*/
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
 .topimage {
   display: flex;
   justify-content: center;
@@ -337,6 +355,45 @@ home-body
   backdrop-filter: blur(20px);
 }
 
+.return_btn {
+  border: none;
+  background: none;
+  margin: 20% 0px;
+}
+
+.return_btn::before,
+.return_btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  height: 1px;
+  background: var(--font-black);
+  transition: .3s;
+}
+
+.return_btn::before {
+  width: 70px;
+}
+
+.return_btn::after {
+  width: 15px;
+  top: 46%;
+  transform: rotate(25deg);
+}
+
+.return_btn:hover::before,
+.return_btn:hover::after {
+  right: -100px;
+}
+
+.return_btn p {
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
 .fv-font {
   color: rgba(250, 250, 250, 0.60);
   font-size: 7.5rem;
@@ -347,6 +404,7 @@ home-body
 }
 
 .main-container {
+  padding-top: 60px;
   overflow: hidden;
 }
 
@@ -536,10 +594,46 @@ project
   gap: 16px;
 }
 
+#project .item {
+  position: relative;
+}
+
 #project .item img {
+  position: relative;
   width: 100%;
   height: 216px;
   object-fit: cover;
+}
+
+#project .item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(245, 245, 245, 0.8);
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-radius: 8px;
+}
+
+#project .item:hover .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#project .item .item-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 100;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+
+#project .item:hover .item-info {
+  opacity: 1;
 }
 
 .companyname {
@@ -572,8 +666,8 @@ section#contact {
   width: clamp(355px, 80%, 867px);
   padding: 3% 2%;
   border-radius: 22px;
-  background: rgba(222, 222, 218, 0.40);
-  backdrop-filter: blur(6px);
+  background: rgba(222, 222, 218, 0.20);
+  backdrop-filter: blur(4px);
 }
 
 #contact .sns-icon-list {
@@ -613,7 +707,6 @@ form .flex-c {
 
 input[type="text"],
 input[type="email"],
-input[type="tel"],
 textarea {
   font-size: 1rem;
   border-radius: 22px;
@@ -622,7 +715,15 @@ textarea {
   width: 100%;
   padding: 10px 20px;
   margin-bottom: 14px;
-  box-shadow: 0px 10px 20px -18px;
+  box-shadow: inset 2px 2px 5px #BABECC,
+    inset -5px -5px 10px #ffffff73;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  box-shadow: inset 1px 1px 2px #BABECC,
+    inset -1px -1px 2px #ffffff73;
 }
 
 input::-webkit-input-placeholder,
@@ -681,6 +782,30 @@ textarea::-webkit-input-placeholder {
 .type1:hover::after {
   visibility: visible;
   transform: scale(100) translateX(2px);
+}
+
+.form-control {
+  position: relative;
+}
+
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
 }
 
 /*================================
@@ -1131,6 +1256,7 @@ work-body
 
   .fv-font {
     font-size: 4rem;
+    gap: inherit;
   }
 
   #aboutme {

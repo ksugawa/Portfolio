@@ -32,7 +32,7 @@
             <div class="sitetitle">
                 <nav class="menu collapse">
                     <ul>
-                        <li><a href="<?php echo esc_url(home_url('/')); ?>">ABOUT</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/')); ?>">HOME</a></li>
                         <li><a href="<?php echo esc_url(home_url('/')); ?>work/">WORK</a></li>
                         <li><a href="<?php echo esc_url(home_url('/')); ?>other/">OTHER</a></li>
                     </ul>
