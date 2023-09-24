@@ -711,8 +711,19 @@ article h2 {
 }
 
 /*================================
-page 
+404
 ================================*/
+.error-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-content h2 {
+  text-align: center;
+  font-size: 5em;
+}
 
 
 /*================================
