@@ -1,4 +1,5 @@
-$(function () { // スライダー
+// スライダー
+$(function () { 
   $('#js-slider').slick({
     arrows: true,
     dots: true,
@@ -10,11 +11,13 @@ $(function () { // スライダー
   });
 });
 
+// ナビゲーションボタンアニメーション
 document.querySelector('.navbtn').addEventListener('click', function () {
   document.querySelector('.navbtn').classList.toggle('active');
   document.querySelector('.menu').classList.toggle('panelactive');
 });
 
+// スキルカードアニメーション
 document.getElementById('skill-card_develop').addEventListener('click', function () {
 
   document.getElementById('develop-skill-set').style.display = 'block';
@@ -42,6 +45,7 @@ document.getElementById('skill-set-design').addEventListener('click', function (
   document.getElementById('design-skill-set').style.display = 'block';
 });
 
+// fade-inアニメーション
 let fadeInTarget = document.querySelectorAll('.fade-in');
 window.addEventListener('scroll', () => {
   for (let i = 0; i < fadeInTarget.length; i++) {
@@ -69,6 +73,7 @@ $("#switch").on('click', function () {
   }
 });
 
+//ページ内スクロール
 $(function () {
   $('a[href^="#"]').click(function () { //ページ内スクロール
     var speed = 500;
@@ -82,6 +87,7 @@ $(function () {
   });
 });
 
+//バリデーション
 
 
 
