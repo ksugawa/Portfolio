@@ -68,7 +68,6 @@ window.addEventListener('scroll', () => {
 
 
 //Switch light/dark
-
 $("#switch").on('click', function () {
   if ($("body").hasClass("light")) {
     $("body").removeClass("light");
@@ -82,7 +81,7 @@ $("#switch").on('click', function () {
 
 //ページ内スクロール
 $(function () {
-  $('a[href^="#"]').click(function () { //ページ内スクロール
+  $('a[href^="#"]').click(function () {
     var speed = 500;
     var href = $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
