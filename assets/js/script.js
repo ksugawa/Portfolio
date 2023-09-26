@@ -1,5 +1,39 @@
+//ページ内スクロール
+document.addEventListener('DOMContentLoaded', function () {
+  const links = document.querySelectorAll('a[href^="#"]');
+
+  links.forEach((link) => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      
+      const href = this.getAttribute('href');
+      const target = document.querySelector(href);
+      
+      if (target) {
+        const targetOffset = target.getBoundingClientRect().top + window.scrollY;
+        const initialOffset = window.scrollY;
+        const distance = targetOffset - initialOffset - 100;
+        const duration = 500;
+        const startTime = performance.now();
+        
+        function scroll(timestamp) {
+          const currentTime = timestamp - startTime;
+          const progress = Math.min(currentTime / duration, 1);
+          window.scrollTo(0, initialOffset + distance * progress);
+          
+          if (currentTime < duration) {
+            requestAnimationFrame(scroll);
+          }
+        }
+        
+        requestAnimationFrame(scroll);
+      }
+    });
+  });
+});
+
 // スライダー
-$(function () { 
+$(function () {
   $('#js-slider').slick({
     arrows: true,
     dots: true,
@@ -12,52 +46,70 @@ $(function () {
 });
 
 // ナビゲーションボタンアニメーション
-const navbtn = document.querySelector('navbtn');
-const menu = document.querySelector('.menu');
+document.addEventListener('DOMContentLoaded', function () {
+  const navbtn = document.querySelector('.navbtn');
+  const menu = document.querySelector('.menu');
 
-navbtn.addEventListener('click', toggleMenu);
+  navbtn.addEventListener('click', toggleMenu);
 
-function toggleMenu() {
-  navbtn.classList.toggle('active');
-  menu.classList.toggle('panelactive');
-}
+  function toggleMenu() {
+    navbtn.classList.toggle('active');
+    menu.classList.toggle('panelactive');
+  }
 
-const menuLinks = document.querySelectorAll('.menu a');
+  const menuLinks = document.querySelectorAll('.menu a');
 
-menuLinks.forEach((link) => {
-  link.addEventListener('click', removePanelActive);
+  menuLinks.forEach((link) => {
+    link.addEventListener('click', removePanelActive);
+  });
+
+  function removePanelActive() {
+    menu.classList.remove('panelactive');
+  }
 });
 
-function removePanelActive() {
-  menu.classList.remove('panelactive');
-}
+// スキルカードとスキルセットの要素を取得
+document.addEventListener('DOMContentLoaded', function () {
+  const skillCards = [
+    document.getElementById('skill-card_design'),
+    document.getElementById('skill-card_develop'),
+    document.getElementById('skill-card_marketing')
+  ];
 
-// スキルカードアニメーション
-document.getElementById('skill-card_develop').addEventListener('click', function () {
+  const skillSets = [
+    document.getElementById('design-skill-set'),
+    document.getElementById('develop-skill-set'),
+    document.getElementById('seo-skill-set')
+  ];
 
-  document.getElementById('develop-skill-set').style.display = 'block';
+  const skillSetsLinks = [
+    document.getElementById('skill-set-design'),
+    document.getElementById('skill-set-develop'),
+    document.getElementById('skill-set-marketing'),
+  ];
 
-  document.getElementById('design-skill-set').style.display = 'none';
-});
+  skillSets[1].style.display = 'none'; // #design-skill-set
+  skillSets[2].style.display = 'none'; // #seo-skill-set
 
-document.getElementById('skill-card_design').addEventListener('click', function () {
+  function hideAllSkillSets() {
+    skillSets.forEach((set) => {
+      set.style.display = 'none';
+    });
+  }
 
-  document.getElementById('develop-skill-set').style.display = 'none';
+  skillCards.forEach((card, index) => {
+    card.addEventListener('click', function () {
+      hideAllSkillSets();
+      skillSets[index].style.display = 'block';
+    });
+  });
 
-  document.getElementById('design-skill-set').style.display = 'block';
-});
-document.getElementById('skill-set-develop').addEventListener('click', function () {
-
-  document.getElementById('develop-skill-set').style.display = 'block';
-
-  document.getElementById('design-skill-set').style.display = 'none';
-});
-
-document.getElementById('skill-set-design').addEventListener('click', function () {
-
-  document.getElementById('develop-skill-set').style.display = 'none';
-
-  document.getElementById('design-skill-set').style.display = 'block';
+  skillSetsLinks.forEach((link, index) => {
+    link.addEventListener('click', function () {
+      hideAllSkillSets();
+      skillSets[index].style.display = 'block';
+    });
+  });
 });
 
 // fade-inアニメーション
@@ -77,103 +129,78 @@ window.addEventListener('scroll', () => {
   }
 });
 
-
-//Switch light/dark
-$("#switch").on('click', function () {
-  if ($("body").hasClass("light")) {
-    $("body").removeClass("light");
-    $("#switch").removeClass("switched");
-  }
-  else {
-    $("body").addClass("light");
-    $("#switch").addClass("switched");
-  }
-});
-
-//ページ内スクロール
-$(function () {
-  $('a[href^="#"]').click(function () {
-    var speed = 500;
-    var href = $(this).attr("href");
-    var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top - 100;
-    $("html, body").animate({
-      scrollTop: position
-    }, speed, "swing");
-    return false;
-  });
-});
-
 //バリデーション
-const form = document.getElementById('form');
-const username = document.getElementById('username');
-const email = document.getElementById('email');
+document.addEventListener('DOMContentLoaded', function () {
 
-function showError(input, message) { // Show input error message
-  const formControl = input.parentElement;
-  formControl.className = 'form-control error';
-  const small = formControl.querySelector('small');
-  small.innerText = message;
-}
+  const form = document.getElementById('form');
+  const username = document.getElementById('username');
+  const email = document.getElementById('email');
 
-function showSuccess(input) { // Show success outline
-  const formControl = input.parentElement;
-  formControl.className = 'form-control success';
-}
-
-function checkEmail(input) {// Check email is valid
-  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  if (re.test(input.value.trim())) {
-    showSuccess(input);
-  } else {
-    showError(input, 'メールアドレスが無効です');
+  function showError(input, message) { // Show input error message
+    const formControl = input.parentElement;
+    formControl.className = 'form-control error';
+    const small = formControl.querySelector('small');
+    small.innerText = message;
   }
-}
 
-function checkRequired(inputArr) { //Check required field
-  let isRequired = false;
-  inputArr.forEach(function(input) {
+  function showSuccess(input) { // Show success outline
+    const formControl = input.parentElement;
+    formControl.className = 'form-control success';
+  }
+
+  function checkEmail(input) {// Check email is valid
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (re.test(input.value.trim())) {
+      showSuccess(input);
+    } else {
+      showError(input, 'メールアドレスが無効です');
+    }
+  }
+
+  function checkRequired(inputArr) { //Check required field
+    let isRequired = false;
+    inputArr.forEach(function (input) {
       if (input.value.trim() === '') {
-          showError(input, `${getFieldName(input)} is required`);
-          isRequired = true;
+        showError(input, `${getFieldName(input)} is required`);
+        isRequired = true;
       } else {
-          showSuccess(input);
+        showSuccess(input);
       }
+    });
+
+    return isRequired;
+  }
+
+  function checkLength(input, min, max) { //Check input length
+    if (input.value.length < min) {
+      showError(
+        input,
+        `${getFieldName(input)} must be at least ${min} characters`
+      );
+    } else if (input.value.length > max) {
+      showError(
+        input,
+        `${getFieldName(input)} must be less than ${max} characters`
+      );
+    } else {
+      showSuccess(input);
+    }
+  }
+
+  function getFieldName(input) { //Get fieldname
+    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+  }
+
+  form.addEventListener('submit', function (e) { //Event listeners
+    e.preventDefault();
+
+    if (checkRequired([username, email])) {
+      checkLength(username, 3, 15);
+      checkEmail(email);
+    }
+
   });
 
-  return isRequired;
-}
-
-function checkLength(input, min, max) { //Check input length
-  if (input.value.length < min) {
-    showError(
-      input,
-      `${getFieldName(input)} must be at least ${min} characters`
-    );
-  } else if (input.value.length > max) {
-    showError(
-      input,
-      `${getFieldName(input)} must be less than ${max} characters`
-    );
-  } else {
-    showSuccess(input);
-  }
-}
-
-function getFieldName(input) { //Get fieldname
-  return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-}
-
-form.addEventListener('submit', function(e) { //Event listeners
-  e.preventDefault();
-
-  if(checkRequired([username, email])){
-    checkLength(username, 3, 15);
-    checkEmail(email);
-  }
-
 });
-
-
 
 
