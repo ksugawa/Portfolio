@@ -191,46 +191,63 @@
   </section>
   <section id="project" class="fade-in">
     <div class="contents-inner">
-      <div class="mb-4">
-        <p class="txt_en font-38 font-w-700">Recent Project</p>
-        <p>最新のプロジェクト</p>
+      <div class="flex-r">
+        <div class="mb-4">
+          <p class="txt_en font-38 font-w-700">Recent Project</p>
+          <p>最新のプロジェクト</p>
+        </div>
+        <div>
+          <a href="<?php echo home_url(); ?>/work">
+            <div class="more-btn">
+              <span>VIEW MORE</span>
+            </div>
+          </a>
+        </div>
+
       </div>
       <div>
-        <ul class="grid">
-          <?php
-          $args = array(
-            'post_type' => 'post',
-            'posts_per_page' => 3
-          ); ?>
 
-          <?php $my_query = new WP_Query($args); ?>
+        <?php
+        $args = array(
+          'post_type' => 'post',
+          'posts_per_page' => 3
+        );
+        $my_query = new WP_Query($args);
+        ?>
+        <?php if ($my_query->have_posts()) : ?>
 
-          <?php while ($my_query->have_posts()) : $my_query->the_post();?>
+          <ul class="flex-r" id="project-slider">
 
-            <a href="<?php the_permalink(); ?>">
-              <div class="item">
-                <div class="item-img">
-                  <?php the_post_thumbnail(); ?>
-                </div>
-                <div class="overlay"></div>
+            <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
-                <div class="item-info">
+              <?php
+              $cat = get_the_category();
+              $cat = $cat[0];
+              $cat_link = get_category_link($cat);
+              ?>
+
+              <a href="<?php the_permalink(); ?>">
+                <div class="item">
+                  <div class="item-img">
+                    <?php the_post_thumbnail(); ?>
+                  </div>
+
+                  <div class="ttlCol font-playfair">
+                    <h2><?php the_title(); ?></h2>
+                  </div>
                   <div class="ttl">
-                    <p><?php the_title(); ?></p>
-                  </div>
-                  <div class="companyname">
-                    <p><?php the_field('company-name'); ?></p>
+                    <div class="txt">
+                      <p class="tag font-playfair"><?php echo $cat->cat_name; ?></p>
+                      <p class="day font-playfair"><?php echo get_the_date(); ?></p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </a>
-          <?php endwhile; ?>
-        </ul>
-        <a href="<?php echo home_url(); ?>/work">
-          <div class="more-btn">
-            <p>VIEW MORE</p>
-          </div>
-        </a>
+              </a>
+            <?php endwhile; ?>
+          </ul>
+        <?php endif; ?>
+        <?php wp_reset_postdata(); ?>
+
       </div>
   </section>
   <section id="contact" class="fade-in">
