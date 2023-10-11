@@ -45,6 +45,17 @@ $(function () {
   });
 });
 
+// ヘッドラインスライダー
+document.addEventListener("scroll", () => {
+  const topElement = document.getElementById('head-line_top');
+  const bottomElement = document.getElementById('head-line_btm');
+
+  const scrollY = window.scrollY;
+
+  topElement.style.transform = `translateX(${scrollY}px)`;
+  bottomElement.style.transform = `translateX(-${scrollY}px)`
+});
+
 // ナビゲーションボタンアニメーション
 document.addEventListener('DOMContentLoaded', function () {
   const navbtn = document.querySelector('.navbtn');
