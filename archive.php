@@ -3,7 +3,7 @@
 <main class="page-main">
     <div class="main-container">
 
-        <span class="caption">Work</span>
+        <span class="caption font-playfair">Work</span>
         <div class="work-lists">
 
             <?php if (have_posts()) : ?>
@@ -17,14 +17,14 @@
                             <div class="work-item__img">
                                 <?php the_post_thumbnail(); ?>
                             </div>
+                            <div class="ttlCol font-playfair">
+                                <h2><?php the_title(); ?></h2>
+                            </div>
                             <div class="ttl">
                                 <div class="txt">
-                                    <p class="tag"><?php echo $cat->cat_name; ?></p>
-                                    <p class="day"><?php echo get_the_date(); ?></p>
+                                    <p class="tag font-playfair"><?php echo $cat->cat_name; ?></p>
+                                    <p class="day font-playfair"><?php echo get_the_date(); ?></p>
                                 </div>
-                            </div>
-                            <div class="ttlCol">
-                                <h2><?php the_title(); ?></h2>
                             </div>
                         </a>
                     </div>
