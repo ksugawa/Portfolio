@@ -251,10 +251,78 @@ body.other .sitetitle a {
   display: none;
 }
 
-.txt_en {
+.more-btn {
+  position: relative;
+  padding: 16px;
+  width: 200%;
+}
+
+.more-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  display: block;
+  border-radius: 999px;
+  width: 52px;
+  height: 52px;
+  transition: all 0.3s ease;
+}
+
+.more-btn:hover::before {
+  width: 100%;
+  border: 1px solid var(--font-black);
+}
+
+.more-btn span {
+  position: relative;
+}
+
+.more-btn span::before,
+.more-btn span::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  height: 1px;
+  background: var(--font-black);
+  transition: .3s;
+  top: 50%;
+  transition: .3s;
+}
+
+.more-btn span:hover::before,
+.more-btn span:hover::after {
+  right: -80%;
+}
+
+.more-btn span::before {
+  width: 48px;
+}
+
+.more-btn span::after {
+  width: 15px;
+  top: 38%;
+  transform: rotate(25deg);
+}
+
+.txt_en,
+.font-playfair {
   font-family: var(--font-e-playfair);
   line-height: 1.5;
 }
+
+.font-source {
+  font-family: var(--font-e-source);
+  line-height: 1.5;
+}
+
+.font-fraunces {
+  font-family: var(--font-e-fraunces);
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+
 
 .page-head {
   width: 86%;
@@ -431,6 +499,11 @@ home-body
   position: relative;
   display: inline-block;
   text-decoration: none;
+  transition: all .5s ease-in;
+}
+
+.main-container a:nth-child(2n) {
+  margin-top: 7rem;
 }
 
 .main-container a::after {
@@ -456,6 +529,11 @@ home-body
   vertical-align: middle;
   line-height: 2;
 }
+
+.caption {
+  font-size: 8em;
+}
+
 /*headline
 ================================*/
 .head-line {
@@ -625,12 +703,14 @@ home-body
   color: #232323;
 }
 
-/*================================
-project
+
+/*project
 ================================*/
-#project .grid {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+#project-slider {
+  overflow: hidden;
+  width: 100000px !important;
+  justify-content: flex-start;
+  gap: 20rem;
 }
 
 #project .item {
@@ -941,13 +1021,22 @@ work-body
   overflow: hidden;
 }
 
+.ttlCol {
+  border-bottom: 1px solid var(--font-black);
+}
+
+.ttlCol h2 {
+  font-size: 2em;
+}
+
 .ttl {
   padding-top: 5px;
 }
 
-.txt {
+.ttl .txt {
   display: flex;
   font-size: 12px;
+  justify-content: space-between;
 }
 
 .txt p {

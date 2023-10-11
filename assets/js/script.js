@@ -26,27 +26,27 @@ document.addEventListener('DOMContentLoaded', function () {
   links.forEach((link) => {
     link.addEventListener('click', function (e) {
       e.preventDefault();
-      
+
       const href = this.getAttribute('href');
       const target = document.querySelector(href);
-      
+
       if (target) {
         const targetOffset = target.getBoundingClientRect().top + window.scrollY;
         const initialOffset = window.scrollY;
         const distance = targetOffset - initialOffset - 100;
         const duration = 500;
         const startTime = performance.now();
-        
+
         function scroll(timestamp) {
           const currentTime = timestamp - startTime;
           const progress = Math.min(currentTime / duration, 1);
           window.scrollTo(0, initialOffset + distance * progress);
-          
+
           if (currentTime < duration) {
             requestAnimationFrame(scroll);
           }
         }
-        
+
         requestAnimationFrame(scroll);
       }
     });
@@ -76,6 +76,25 @@ document.addEventListener("scroll", () => {
   topElement.style.transform = `translateX(${scrollY}px)`;
   bottomElement.style.transform = `translateX(-${scrollY}px)`
 });
+
+//プロジェクトスライダー
+document.addEventListener('DOMContentLoaded', function () {
+  const projectSlider = document.getElementById('project-slider');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    projectSlider.style.transform = `translateX(-${scrollY}px)`;
+    document.body.style.overflow = 'hidden';
+  });
+
+  window.addEventListener('scroll', () => {
+    clearTimeout(window.scrollEndTimeout);
+    window.scrollEndTimeout = setTimeout(() => {
+      document.body.style.overflow = '';
+    }, 500);
+  });
+});
+
 
 // ナビゲーションボタンアニメーション
 document.addEventListener('DOMContentLoaded', function () {
