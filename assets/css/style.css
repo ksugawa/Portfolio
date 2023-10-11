@@ -187,7 +187,7 @@ h3 {
 /* sitetitle */
 .sitetitle {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   color: #fff;
   width: 100%;
@@ -199,7 +199,7 @@ h3 {
 .sitetitle h1 {
   padding: 10px;
   margin: 0;
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-e-playfair);
   color: #fff;
 }
 
@@ -214,6 +214,11 @@ h3 {
   color: #fff;
   position: relative;
   text-decoration: none;
+}
+
+body.archive .sitetitle a,
+body.other .sitetitle a {
+  color: var(--font-black);
 }
 
 .menu a::after {

@@ -1,3 +1,24 @@
+//ヘッダーのスクロール時文字色変更
+document.addEventListener('DOMContentLoaded', function () {
+  const header = document.querySelector('.header-container');
+  const links = header.querySelectorAll('.sitetitle a');
+  const scrollThreshold = 800;
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+
+    if (scrollY >= scrollThreshold) {
+      links.forEach(function (link) {
+        link.style.color = '#262626';
+      });
+    } else {
+      links.forEach(function (link) {
+        link.style.color = '#fff'; // 初期の文字色
+      });
+    }
+  });
+});
+
 //ページ内スクロール
 document.addEventListener('DOMContentLoaded', function () {
   const links = document.querySelectorAll('a[href^="#"]');
