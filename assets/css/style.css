@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -20,8 +20,10 @@ html *,
 :root {
   --page-bg: #fff;
   --font-black: #262626;
+  --font-white: #fafafa;
   --font-e-playfair: 'Playfair Display', serif;
   --font-e-source: 'Source Sans 3', sans-serif;
+  --font-e-fraunces: 'Fraunces', serif;
   --border-b: 1px solid #CCC;
   --success-color: #2ecc71;
   --error-color: #e74c3c;
@@ -145,6 +147,10 @@ h3 {
   font-size: 3rem;
 }
 
+.font-100 {
+  font-size: 6.25rem;
+}
+
 .font-w-600 {
   font-weight: 600;
 
@@ -157,6 +163,9 @@ h3 {
 /* -! font */
 
 /* spacing */
+.mr-30 {
+  margin-right: 2rem;
+}
 .mt-4 {
   margin-top: 4%;
 }
@@ -268,6 +277,10 @@ h3 {
 
 .w-60 {
   width: 60%;
+}
+
+.w-100 {
+  width: 100vw;
 }
 
 /* -! wide */
@@ -437,6 +450,21 @@ home-body
   height: 334px;
   vertical-align: middle;
   line-height: 2;
+}
+/*headline
+================================*/
+.head-line {
+  width: 10000px;
+  overflow: hidden;
+  transition: all .3s ease;
+}
+
+.head-line span {
+  padding: 0 12px;
+}
+
+#head-line_top {
+  margin-left: -1000px;
 }
 
 /*aboutme

@@ -18,6 +18,12 @@
   </div>
 </div>
 <main class="main-container">
+  <div id="head-line_top" class="head-line">
+    <span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span>
+  </div>
+  <div id="head-line_btm" class="head-line">
+    <span class="font-playfair font-100">Web</span><span class="font-fraunces font-100 mr-30">develop</span><span class="font-playfair font-100">Web</span><span class="font-fraunces font-100 mr-30">develop</span><span class="font-playfair font-100">Web</span><span class="font-fraunces font-100 mr-30">develop</span><span class="font-playfair font-100">Web</span><span class="font-fraunces font-100 mr-30">develop</span><span class="font-playfair font-100">Web</span><span class="font-fraunces font-100 mr-30">develop</span><span class="font-playfair font-100">Web</span><span class="font-fraunces font-100 mr-30">develop</span>
+  </div>
   <section id="aboutme" class="fade-in">
     <div class="contents-inner flex-r">
       <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/aboutme.png" alt=""></div>
