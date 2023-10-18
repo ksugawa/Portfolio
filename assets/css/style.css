@@ -498,8 +498,7 @@ home-body
   color: #333;
   position: relative;
   display: inline-block;
-  text-decoration: none;
-  transition: all .5s ease-in;
+  margin-right: 10rem;
 }
 
 .main-container a:nth-child(2n) {
@@ -536,13 +535,13 @@ home-body
 
 /*headline
 ================================*/
-.head-line {
+.slider-line {
   width: 10000px;
   overflow: hidden;
   transition: all .3s ease;
 }
 
-.head-line span {
+.slider-line span {
   padding: 0 12px;
 }
 
@@ -707,10 +706,8 @@ home-body
 /*project
 ================================*/
 #project-slider {
-  overflow: hidden;
-  width: 100000px !important;
+  flex: 0 0 auto;
   justify-content: flex-start;
-  gap: 20rem;
 }
 
 #project .item {

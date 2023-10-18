@@ -66,33 +66,18 @@ $(function () {
   });
 });
 
-// ヘッドラインスライダー
+// ヘッドライン,プロジェクトスライダー
 document.addEventListener("scroll", () => {
   const topElement = document.getElementById('head-line_top');
   const bottomElement = document.getElementById('head-line_btm');
+  const projectSlider = document.getElementById('project-slider');
+
 
   const scrollY = window.scrollY;
 
   topElement.style.transform = `translateX(${scrollY}px)`;
-  bottomElement.style.transform = `translateX(-${scrollY}px)`
-});
-
-//プロジェクトスライダー
-document.addEventListener('DOMContentLoaded', function () {
-  const projectSlider = document.getElementById('project-slider');
-
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    projectSlider.style.transform = `translateX(-${scrollY}px)`;
-    document.body.style.overflow = 'hidden';
-  });
-
-  window.addEventListener('scroll', () => {
-    clearTimeout(window.scrollEndTimeout);
-    window.scrollEndTimeout = setTimeout(() => {
-      document.body.style.overflow = '';
-    }, 500);
-  });
+  bottomElement.style.transform = `translateX(-${scrollY}px)`;
+  projectSlider.style.transform = `translateX(${scrollY}px)`;
 });
 
 

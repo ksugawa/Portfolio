@@ -18,10 +18,10 @@
   </div>
 </div>
 <main class="main-container">
-  <div id="head-line_top" class="head-line">
+  <div id="head-line_top" class="slider-line">
     <span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span>
   </div>
-  <div id="head-line_btm" class="head-line">
+  <div id="head-line_btm" class="slider-line">
     <span class="font-playfair font-100">Web</span><span class="font-fraunces font-100 mr-30">develop</span><span class="font-playfair font-100">Web</span><span class="font-fraunces font-100 mr-30">develop</span><span class="font-playfair font-100">Web</span><span class="font-fraunces font-100 mr-30">develop</span><span class="font-playfair font-100">Web</span><span class="font-fraunces font-100 mr-30">develop</span><span class="font-playfair font-100">Web</span><span class="font-fraunces font-100 mr-30">develop</span><span class="font-playfair font-100">Web</span><span class="font-fraunces font-100 mr-30">develop</span>
   </div>
   <section id="aboutme" class="fade-in">
@@ -216,7 +216,7 @@
         ?>
         <?php if ($my_query->have_posts()) : ?>
 
-          <ul class="flex-r" id="project-slider">
+          <ul class="flex-r slider-line" id="project-slider">
 
             <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
