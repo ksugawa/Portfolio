@@ -217,7 +217,7 @@ h3 {
 }
 
 body.archive .sitetitle a,
-body.other .sitetitle a {
+body.page .sitetitle a {
   color: var(--font-black);
 }
 
@@ -701,7 +701,6 @@ home-body
   color: #232323;
 }
 
-
 /*project
 ================================*/
 #project-slider {
@@ -711,6 +710,7 @@ home-body
 
 #project .item {
   position: relative;
+  margin-right: 15rem;
 }
 
 #project .item img {
