@@ -86,4 +86,26 @@ function form_init() {
         $header = "From: {$fromname} <{$from}>\r\n";
     }
 }
+
+/* ---------- 固定ページのスラッグをclassに付与 ---------- */
+function my_body_class($classes)
+{
+    if (is_page()) {
+        $page = get_post();
+        $classes[] = $page->post_name;
+    } elseif (is_archive()) {
+        $queried_object = get_queried_object();
+        if ($queried_object && property_exists($queried_object, 'name')) {
+            $classes[] = $queried_object->name;
+        }
+    }
+    return $classes;
+}
+add_filter('body_class', 'my_body_class');
+
+
+
+
+
+
 ?>
