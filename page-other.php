@@ -97,7 +97,7 @@
     <div class="contents-inner">
       <h2 class="title">ABOUT</h2>
       <h3 class="caption">
-        <a href="work.html">Works</a>
+        <a href="<?php echo esc_url(home_url('/')); ?>work">Works</a>
       </h3>
       <div class="sec4-flex">
         <div clas="about_image">
