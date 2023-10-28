@@ -29,7 +29,7 @@
       <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/aboutme.png" alt=""></div>
       <div class="w-60">
         <p class="txt_en font-26 font-w-600">About me</p>
-        <p class="txt_en font-38 font-w-700 mb-2">
+        <p class="txt_en font-38 font-w-700 mb-2" id="text-target">
           I’m Kumiko, a UI/UX Designer and<br>
           Web Developer
         </p>
@@ -46,7 +46,7 @@
     <div class="contents-inner flex-r">
       <div class="w-46">
         <div class="mb-10">
-          <p class="txt_en font-38 font-w-700">My Specialization</p>
+          <p class="txt_en font-38 font-w-700" id="text-target">My Specialization</p>
           <p>提供できるもの</p>
         </div>
         <div>
@@ -96,7 +96,7 @@
       </div>
       <div id="skill-set" class="w-44">
         <div class="mb-10">
-          <p class="txt_en font-38 font-w-700">Skill Set</p>
+          <p class="txt_en font-38 font-w-700" id="text-target">Skill Set</p>
           <p>スキル</p>
         </div>
         <ul class="flex-r border-b a-center t-center mb-4">

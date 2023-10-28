@@ -1054,6 +1054,27 @@ work-body
   transform: translate(0, 0);
 }
 
+/* text animation
+================================================== */
+#text-target {
+  overflow-y: hidden;
+}
+
+#text-target span {
+  transform: translateY(100%);
+}
+
+#text-target .is-show span{
+  animation: pop 0.4s ease-out forwards;
+}
+
+@keyframes pop {
+  to {
+    transform: translateY(0);
+  }
+}
+
+
 @media screen and (max-width:1023px) {
 
   #aboutme>.flex-r {
