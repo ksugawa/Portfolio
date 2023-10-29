@@ -669,10 +669,6 @@ home-body
   display: block;
 }
 
-#design-skill-set li {
-  width: 22%;
-}
-
 .skill-set-logo {
   width: 110px;
   height: 178px;
@@ -682,6 +678,10 @@ home-body
   border-radius: 160px;
   border: 3px solid #F5F5F5;
   background: #F5F5F5;
+}
+
+.skill-set-logo img {
+  width: 60px;
 }
 
 .skill-set-list .flex-r {
@@ -783,7 +783,7 @@ section#contact {
 }
 
 #contact .contents-inner .flex-r>div {
-  width: 46%
+  width: clamp(350px,46%,398px)
 }
 
 #contact .contact-head {
@@ -1089,6 +1089,7 @@ work-body
 
   .w-60,
   .w-42,
+  .w-44,
   .w-46 {
     width: 100%;
   }
@@ -1113,6 +1114,10 @@ work-body
 
   .mb-22 {
     margin-bottom: 10%;
+  }
+
+  .font-100 {
+    font-size: 4.25rem;
   }
 
 
@@ -1299,6 +1304,14 @@ work-body
 
   #project .grid {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  #contact .contents-inner .flex-r>div {
+    width: 100%;
+  }
+
+  #contact .sns-icon-list {
+    margin: 4% 0;
   }
 
   /*================================

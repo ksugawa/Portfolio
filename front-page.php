@@ -94,7 +94,7 @@
           </ul>
         </div>
       </div>
-      <div id="skill-set" class="w-44">
+      <div id="skill-set" class="w-46">
         <div class="mb-10">
           <p class="txt_en font-38 font-w-700" id="text-target">Skill Set</p>
           <p>スキル</p>
