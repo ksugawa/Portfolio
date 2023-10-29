@@ -115,22 +115,35 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // ナビゲーションボタンアニメーション
   const navbtn = document.querySelector('.navbtn');
+  const navbtnLines = document.querySelectorAll('.navbtn > span');
   const menu = document.querySelector('.menu');
+  
   
   function toggleMenu() {
     navbtn.classList.toggle('active');
     menu.classList.toggle('panelactive');
   }
-  
-  navbtn.addEventListener('click', toggleMenu);
+
+  function navHandleScroll() {
+    const scrollY = window.scrollY;
+    const scrollThreshold = 800;
+    const color = scrollY >= scrollThreshold ? '#262626' : '#fff';
+    navbtnLines.forEach(line => {
+      line.style.background = color;
+    });
+  }
   
   const menuLinks = document.querySelectorAll('.menu a');
   
   menuLinks.forEach((link) => {
     link.addEventListener('click', () => {
-      menu.classList.remove('panelsctive');
+      menu.classList.remove('panelactive');
     });
   });
+  
+  window.addEventListener('scroll', navHandleScroll);
+  navbtn.addEventListener('click', toggleMenu);
+
 
   // スキルカードとスキルセットの要素を取得
   const skillCards = [
