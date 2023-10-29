@@ -1062,15 +1062,21 @@ work-body
 
 #text-target span {
   transform: translateY(100%);
+  opacity: 0;
 }
 
-#text-target .is-show span{
+#text-target span.is-show{
   animation: pop 0.4s ease-out forwards;
 }
 
 @keyframes pop {
-  to {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 
