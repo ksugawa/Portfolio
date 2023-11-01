@@ -226,8 +226,8 @@
               $cat_link = get_category_link($cat);
               ?>
 
-              <a href="<?php the_permalink(); ?>">
-                <div class="item">
+              <li class="item">
+                <a href="<?php the_permalink(); ?>">
                   <div class="item-img">
                     <?php the_post_thumbnail(); ?>
                   </div>
@@ -241,8 +241,8 @@
                       <p class="day font-playfair"><?php echo get_the_date(); ?></p>
                     </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </li>
             <?php endwhile; ?>
           </ul>
         <?php endif; ?>

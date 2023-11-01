@@ -3,12 +3,10 @@
 window.addEventListener('DOMContentLoaded', function () {
 
   if (window.location.pathname === '/') {
+
     const header = document.querySelector('.header-container');
     const headerLinks = header.querySelectorAll('.sitetitle a');
     const scrollThreshold = 800;
-
-    const topElement = document.getElementById('head-line_top');
-    const bottomElement = document.getElementById('head-line_btm');
 
     function headerHandleScroll() {
       const scrollY = window.scrollY;
@@ -19,14 +17,35 @@ window.addEventListener('DOMContentLoaded', function () {
       });
     };
 
+
+    const topElement = document.getElementById('head-line_top');
+    const bottomElement = document.getElementById('head-line_btm');
+
     function updateHeadlinePosition() {
       const scrollY = window.scrollY;
-      //const projectSlider = document.getElementById('project-slider');
-      //projectSlider.style.transform = `translateX(${scrollY}px)`;
 
       topElement.style.transform = `translateX(${scrollY}px)`;
       bottomElement.style.transform = `translateX(-${scrollY}px)`;
     };
+
+    const projectSlider = document.getElementById('project-slider');
+    //const projectItem = document.querySelectorAll('#project-slider > .item');
+
+    projectSlider.addEventListener("wheel", (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+        projectSlider.scrollLeft += e.deltaY;
+
+        //const maxScrollLeft = projectSlider.scrollWidth - projectSlider.clientWidth;
+        //if ((projectSlider.scrollLeft <= 0 && e.deltaY < 0) ||
+          //(projectSlider.scrollLeft >= maxScrollLeft && e.deltaY > 0)) {
+         // return;
+
+        //}
+      }
+    });
+
+
 
     window.addEventListener('scroll', headerHandleScroll);
     window.addEventListener('scroll', updateHeadlinePosition);
@@ -117,8 +136,8 @@ window.addEventListener('DOMContentLoaded', function () {
   const navbtn = document.querySelector('.navbtn');
   const navbtnLines = document.querySelectorAll('.navbtn > span');
   const menu = document.querySelector('.menu');
-  
-  
+
+
   function toggleMenu() {
     navbtn.classList.toggle('active');
     menu.classList.toggle('panelactive');
@@ -132,15 +151,15 @@ window.addEventListener('DOMContentLoaded', function () {
       line.style.background = color;
     });
   }
-  
+
   const menuLinks = document.querySelectorAll('.menu a');
-  
+
   menuLinks.forEach((link) => {
     link.addEventListener('click', () => {
       menu.classList.remove('panelactive');
     });
   });
-  
+
   window.addEventListener('scroll', navHandleScroll);
   navbtn.addEventListener('click', toggleMenu);
 
@@ -151,35 +170,35 @@ window.addEventListener('DOMContentLoaded', function () {
     document.getElementById('skill-card_develop'),
     document.getElementById('skill-card_marketing')
   ];
-  
+
   const skillSets = [
     document.getElementById('design-skill-set'),
     document.getElementById('develop-skill-set'),
     document.getElementById('seo-skill-set')
   ];
-  
+
   const skillSetsLinks = [
     document.getElementById('skill-set-design'),
     document.getElementById('skill-set-develop'),
     document.getElementById('skill-set-marketing'),
   ];
-  
+
   skillSets[1].style.display = 'none'; // #design-skill-set
   skillSets[2].style.display = 'none'; // #seo-skill-set
-  
+
   function hideAllSkillSets() {
     skillSets.forEach((set) => {
       set.style.display = 'none';
     });
   }
-  
+
   skillCards.forEach((card, index) => {
     card.addEventListener('click', function () {
       hideAllSkillSets();
       skillSets[index].style.display = 'block';
     });
   });
-  
+
   skillSetsLinks.forEach((link, index) => {
     link.addEventListener('click', function () {
       hideAllSkillSets();
@@ -190,7 +209,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // fade-inアニメーション
   const fadeInTarget = document.querySelectorAll('.fade-in');
-  
+
   window.addEventListener('scroll', () => {
     for (let i = 0; i < fadeInTarget.length; i++) {
       const rect = fadeInTarget[i].getBoundingClientRect().top;
