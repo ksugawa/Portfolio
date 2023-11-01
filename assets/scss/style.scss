@@ -1192,8 +1192,8 @@ work-body
       position: absolute;
       z-index: 2;
       top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      left: 10%;
+      transform: translateY(-50%);
     }
 
     &.panelactive ul {
@@ -1209,7 +1209,12 @@ work-body
         padding: 10px;
         display: block;
         letter-spacing: 0.1em;
+        font-family: "Playfair Display", serif;
         font-weight: bold;
+        font-size: 3rem;
+        color: var(--font-white);
+        text-align: left;
+        line-height: 1.2;
       }
     }
   }
