@@ -274,7 +274,6 @@ body {
 
   &:hover::before {
     width: 100%;
-    border: 1px solid var(--font-black);
   }
 
   span {
@@ -502,10 +501,6 @@ home-body
     position: relative;
     display: inline-block;
 
-    &:nth-child(2n) {
-      margin-top: 7rem;
-    }
-
     &::after {
       position: absolute;
       bottom: -4px;
@@ -721,6 +716,10 @@ home-body
 #project .item {
   position: relative;
   margin-right: 15rem;
+
+  &:nth-child(2n) {
+    margin-top: 7rem;
+  }
 
   img {
     position: relative;
@@ -1017,7 +1016,7 @@ work-body
   margin-top: 50px;
 
   &:nth-child(2n) {
-    margin-top: 100px;
+    margin-top: 12rem;
   }
 }
 
