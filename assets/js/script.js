@@ -2,54 +2,52 @@
 // ヘッドライン,プロジェクトスライダー
 window.addEventListener('DOMContentLoaded', function () {
 
-  if (window.location.pathname === '/') {
+  const header = document.querySelector('.header-container');
+  const headerLinks = header.querySelectorAll('.sitetitle a');
+  const scrollThreshold = 800;
+  const topElement = document.getElementById('head-line_top');
+  const bottomElement = document.getElementById('head-line_btm');
+  const projectSlider = document.getElementById('project-slider');
+  //const projectItem = document.querySelectorAll('#project-slider > .item');
 
-    const header = document.querySelector('.header-container');
-    const headerLinks = header.querySelectorAll('.sitetitle a');
-    const scrollThreshold = 800;
+  function headerHandleScroll() {
+    if (window.location.pathname === '/') {
 
-    function headerHandleScroll() {
       const scrollY = window.scrollY;
       const color = scrollY >= scrollThreshold ? '#262626' : '#fff';
 
       headerLinks.forEach((link) => {
         link.style.color = color;
       });
-    };
+    }
+  };
 
 
-    const topElement = document.getElementById('head-line_top');
-    const bottomElement = document.getElementById('head-line_btm');
-
-    function updateHeadlinePosition() {
+  function updateHeadlinePosition() {
+    if (window.location.pathname === '/') {
       const scrollY = window.scrollY;
 
       topElement.style.transform = `translateX(${scrollY}px)`;
       bottomElement.style.transform = `translateX(-${scrollY}px)`;
     };
-
-    const projectSlider = document.getElementById('project-slider');
-    //const projectItem = document.querySelectorAll('#project-slider > .item');
-
-    projectSlider.addEventListener("wheel", (e) => {
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        e.preventDefault();
-        projectSlider.scrollLeft += e.deltaY;
-
-        //const maxScrollLeft = projectSlider.scrollWidth - projectSlider.clientWidth;
-        //if ((projectSlider.scrollLeft <= 0 && e.deltaY < 0) ||
-          //(projectSlider.scrollLeft >= maxScrollLeft && e.deltaY > 0)) {
-         // return;
-
-        //}
-      }
-    });
+  };
 
 
+  projectSlider.addEventListener("wheel", (e) => {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      e.preventDefault();
+      projectSlider.scrollLeft += e.deltaY;
 
-    window.addEventListener('scroll', headerHandleScroll);
-    window.addEventListener('scroll', updateHeadlinePosition);
-  }
+      //const maxScrollLeft = projectSlider.scrollWidth - projectSlider.clientWidth;
+      //if ((projectSlider.scrollLeft <= 0 && e.deltaY < 0) ||
+      //(projectSlider.scrollLeft >= maxScrollLeft && e.deltaY > 0)) {
+      // return;
+      //}
+    }
+  });
+
+  window.addEventListener('scroll', headerHandleScroll);
+  window.addEventListener('scroll', updateHeadlinePosition);
 
   //ページ内スクロール
   const links = document.querySelectorAll('a[href^="#"]');
@@ -133,35 +131,37 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
   // ナビゲーションボタンアニメーション
-  const navbtn = document.querySelector('.navbtn');
+  const navBtn = document.querySelector('.navbtn');
   const navbtnLines = document.querySelectorAll('.navbtn > span');
   const menu = document.querySelector('.menu');
-
-
-  function toggleMenu() {
-    navbtn.classList.toggle('active');
-    menu.classList.toggle('panelactive');
-  }
-
-  function navHandleScroll() {
-    const scrollY = window.scrollY;
-    const scrollThreshold = 800;
-    const color = scrollY >= scrollThreshold ? '#262626' : '#fff';
-    navbtnLines.forEach(line => {
-      line.style.background = color;
-    });
-  }
-
   const menuLinks = document.querySelectorAll('.menu a');
 
+  function toggleMenu() {
+    const isActive = navBtn.classList.contains('active');
+    navBtn.classList.toggle('active', !isActive);
+    menu.classList.toggle('panelactive', !isActive);
+  }
+
+  function handleNavScroll() {
+    const scrollY = window.scrollY;
+    const scrollThreshold = 800;
+    const changeNavLinesColor = scrollY >= scrollThreshold;
+    const color = changeNavLinesColor ? '#262626' : '#fff';
+
+    if (changeNavLinesColor !== navBtn.dataset.colorChanged) {
+      navbtnLines.forEach(line => {
+        line.style.background = color;
+      });
+      navBtn.dataset.colorChanged = changeNavLinesColor;
+    }
+  }
+
   menuLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      menu.classList.remove('panelactive');
-    });
+    link.addEventListener('click', toggleMenu);
   });
 
-  window.addEventListener('scroll', navHandleScroll);
-  navbtn.addEventListener('click', toggleMenu);
+  window.addEventListener('scroll', handleNavScroll);
+  navBtn.addEventListener('click', toggleMenu);
 
 
   // スキルカードとスキルセットの要素を取得
@@ -224,14 +224,7 @@ window.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
-
-
-
 });
-
-
-
-
 
 
 //バリデーション
