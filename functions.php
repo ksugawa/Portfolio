@@ -24,9 +24,9 @@ function create_post_type()
 {
 
     register_post_type(
-        'watercolor',
+        'blog',
         array(
-            'label' => '水彩画',
+            'label' => '記事',
             'public' => true,
             'has_archive' => true,
             'show_in_rest' => true,
