@@ -853,14 +853,16 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: var(--font-white);
 }
 
-.formbtn {
+.formbtn,  #return-btn{
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 178px;
   height: 40px;
   margin: 4% auto 0;
   display: block;
   border-radius: 30px;
-  border: 2px solid var(--font-white);
   background-color: transparent;
   transition: all .3s;
   cursor: pointer;
@@ -873,11 +875,20 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   }
 }
 
+.formbtn {
+  border: 2px solid var(--font-white);
+
+}
+
 .btn-txt {
   z-index: 1;
   font-weight: 800;
   color: var(--font-white);
   letter-spacing: .2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .type1::after {
@@ -1066,6 +1077,44 @@ work-body
   margin: 0 0 20px 0;
   font-size: 1.75rem;
 }
+
+/*================================
+thanks 
+================================*/
+.thanks-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  #return-btn {
+    text-align: center;
+  }
+}
+
+.thanks-container_inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.thanks-description {
+  margin: 2rem auto;
+}
+
+#return-btn {
+  border: 2px solid var(--font-black);
+  background: #262626;
+}
+
 
 /* fade-in
 ================================================== */

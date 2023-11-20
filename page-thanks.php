@@ -14,7 +14,7 @@
                 <div>
                     <a href="<?php echo home_url(); ?>">
                         <div id="return-btn">
-                            <b class="bpo btn">戻る</b>
+                            <span class="bpo btn btn-txt">戻る</b>
                         </div>
                     </a>
                 </div>
