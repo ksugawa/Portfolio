@@ -41,27 +41,27 @@ function create_post_type()
     );
 
     register_taxonomy(
-        'watercolor-cat',
-        'watercolor',
+        'blog-cat',
+        'blog',
         array(
-            'label' => 'カテゴリー',
-            'hierarchical' => true,
-            'public' => true,
-            'show_in_rest' => true,
+          'label' => 'カテゴリー',
+          'hierarchical' => true,
+          'public' => true,
+          'show_in_rest' => true,
         )
-    );
-
-    register_taxonomy(
-        'watercolor-tag',
-        'watercolor',
+      );
+    
+      register_taxonomy(
+        'blog-tag',
+        'blog',
         array(
-            'label' => 'タグ',
-            'hierarchical' => false,
-            'public' => true,
-            'show_in_rest' => true,
-            'update_count_callback' => '_update_post_term_count',
+          'label' => 'タグ',
+          'hierarchical' => false,
+          'public' => true,
+          'show_in_rest' => true,
+          'update_count_callback' => '_update_post_term_count',
         )
-    );
+      );
 }
 add_action('init', 'create_post_type');
 
