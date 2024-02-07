@@ -43,7 +43,7 @@
 
     </ul>
   </div>
-  <div id="develop-skill-set">
+  <div id="develop-skill-set" class="skill-set-list">
     <ul class="flex-r">
 
       <?php
