@@ -35,6 +35,7 @@
                     <ul>
                         <li><a href="<?php echo esc_url(home_url('/')); ?>">HOME</a></li>
                         <li><a href="<?php echo esc_url(home_url('/')); ?>work/">WORK</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/')); ?>blog/">BLOG</a></li>
                         <li><a href="<?php echo esc_url(home_url('/')); ?>other/">OTHER</a></li>
                     </ul>
                 </nav>
