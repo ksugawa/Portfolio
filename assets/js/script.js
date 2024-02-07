@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', function () {
   const scrollThreshold = 800;
   const topElement = document.getElementById('head-line_top');
   const bottomElement = document.getElementById('head-line_btm');
-  const projectSlider = document.getElementById('project-slider');
+  //const projectSlider = document.getElementById('project-slider');
   //const projectItem = document.querySelectorAll('#project-slider > .item');
 
   function headerHandleScroll() {
@@ -33,18 +33,17 @@ window.addEventListener('DOMContentLoaded', function () {
   };
 
 
-  projectSlider.addEventListener("wheel", (e) => {
-    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-      e.preventDefault();
-      projectSlider.scrollLeft += e.deltaY;
+  // projectSlider.addEventListener("wheel", (e) => {
+  //   if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+  //     e.preventDefault();
+  //     projectSlider.scrollLeft += e.deltaY;
 
-      //const maxScrollLeft = projectSlider.scrollWidth - projectSlider.clientWidth;
-      //if ((projectSlider.scrollLeft <= 0 && e.deltaY < 0) ||
-      //(projectSlider.scrollLeft >= maxScrollLeft && e.deltaY > 0)) {
-      // return;
-      //}
-    }
-  });
+  //     //const maxScrollLeft = projectSlider.scrollWidth - projectSlider.clientWidth;
+  //     //if ((projectSlider.scrollLeft <= 0 && e.deltaY < 0) ||
+  //     //(projectSlider.scrollLeft >= maxScrollLeft && e.deltaY > 0)) {
+  //     // return;
+  //     //}
+  //   }
 
   window.addEventListener('scroll', headerHandleScroll);
   window.addEventListener('scroll', updateHeadlinePosition);
