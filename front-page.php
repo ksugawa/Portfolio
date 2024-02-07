@@ -18,12 +18,7 @@
   </div>
 </div>
 <main class="main-container">
-  <div id="head-line_top" class="slider-line">
-    <span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span><span class="font-source font-100">UI/UX</span><span class="font-playfair font-100 mr-30">Design</span>
-  </div>
-  <div id="head-line_btm" class="slider-line">
-    <span class="font-playfair font-100">Web</span><span class="font-fraunces font-100 mr-30">develop</span><span class="font-playfair font-100">Web</span><span class="font-fraunces font-100 mr-30">develop</span><span class="font-playfair font-100">Web</span><span class="font-fraunces font-100 mr-30">develop</span><span class="font-playfair font-100">Web</span><span class="font-fraunces font-100 mr-30">develop</span><span class="font-playfair font-100">Web</span><span class="font-fraunces font-100 mr-30">develop</span><span class="font-playfair font-100">Web</span><span class="font-fraunces font-100 mr-30">develop</span>
-  </div>
+  <?php get_template_part('template-parts/head-line'); ?>
   <section id="aboutme" class="fade-in">
     <div class="contents-inner flex-r">
       <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/aboutme.png" alt=""></div>
@@ -44,150 +39,8 @@
   </section>
   <section id="skill" class="fade-in">
     <div class="contents-inner flex-r">
-      <div class="w-46">
-        <div class="mb-10">
-          <p class="txt_en font-38 font-w-700" id="text-target">My Specialization</p>
-          <p>提供できるもの</p>
-        </div>
-        <div>
-          <ul class="flex-r">
-            <li id="skill-card_design" class="card">
-              <div class="flex-c center card-front">
-                <div class="card-icon">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-design.svg" alt="">
-                </div>
-                <div>
-                  <p class="txt_en font-w-700">Web Design</p>
-                  <p class="txt_en font-w-700">UI/UX Design</p>
-                </div>
-              </div>
-              <div class="flex-c center card-inner">
-                <p class="txt_en font-w-700 font-48">12</p>
-                <p class="txt_en font-w-700">Project</p>
-              </div>
-            </li>
-            <li id="skill-card_develop" class="card">
-              <div class="flex-c center card-front">
-                <div class="card-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-development.svg" alt=""></div>
-                <div>
-                  <p class="txt_en font-w-700">Development</p>
-                </div>
-              </div>
-              <div class="flex-c center card-inner">
-                <p class="txt_en font-w-700 font-48">10</p>
-                <p class="txt_en font-w-700">Project</p>
-              </div>
-            </li>
-            <li id="skill-card_marketing" class="card">
-              <div class="flex-c center card-front">
-                <div class="card-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-marketing.svg" alt=""></div>
-                <div>
-                  <p class="txt_en font-w-700">SEO/</p>
-                  <p class="txt_en font-w-700">Marketing</p>
-                </div>
-              </div>
-              <div class="flex-c center card-inner">
-                <p class="txt_en font-w-700 font-48">4</p>
-                <p class="txt_en font-w-700">Project</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div id="skill-set" class="w-46">
-        <div class="mb-10">
-          <p class="txt_en font-38 font-w-700" id="text-target">Skill Set</p>
-          <p>スキル</p>
-        </div>
-        <ul class="flex-r border-b a-center t-center mb-4">
-          <li id="skill-set-design">
-            <div>
-              <p class="txt_en font-w-700">Web Design</p>
-              <p class="txt_en font-w-700">UI/UX Design</p>
-            </div>
-          </li>
-          <li id="skill-set-develop">
-            <p class="txt_en font-w-700">Development</p>
-          </li>
-          <li id="skill-set-marketing">
-            <div>
-              <p class="txt_en font-w-700">SEO/</p>
-              <p class="txt_en font-w-700">Marketing</p>
-            </div>
-          </li>
-        </ul>
-        <div id="design-skill-set" class="skill-set-list">
-          <ul class="flex-r">
-            <li class="flex-c center">
-              <div class="flex-c center skill-set-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-figma.png" alt="">
-              </div>
-              <p>Figma</p>
-            </li>
-            <li class="flex-c center">
-              <div class="flex-c center skill-set-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-ps.png" alt="">
-              </div>
-              <p>Photoshop</p>
-            </li>
-            <li class="flex-c center">
-              <div class="flex-c center skill-set-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-ai.png" alt="">
-              </div>
-              <p>Illustrator</p>
-            </li>
-            <li class="flex-c center">
-              <div class="flex-c center skill-set-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-xd.png" alt="">
-              </div>
-              <p>XD</p>
-            </li>
-          </ul>
-        </div>
-        <div id="develop-skill-set">
-          <ul class="grid">
-            <li>
-              <p class="txt_en font-w-700">Html5/Css3</p>
-              <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill1.svg" alt=""></div>
-            </li>
-            <li>
-              <p class="txt_en font-w-700">jQuery</p>
-              <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill1.svg" alt=""></div>
-            </li>
-            <li>
-              <p class="txt_en font-w-700">JavaScipt</p>
-              <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill3.svg" alt=""></div>
-            </li>
-            <li>
-              <p class="txt_en font-w-700">PHP</p>
-              <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-skill2.svg" alt=""></div>
-            </li>
-          </ul>
-        </div>
-        <div id="seo-skill-set" class="skill-set-list">
-          <ul class="flex-r">
-            <li class="flex-c center">
-              <div class="flex-c center skill-set-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-gads.png" alt="">
-              </div>
-              <p>Google Ads</p>
-            </li>
-            <li class="flex-c center">
-              <div class="flex-c center skill-set-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-ganalytics.png" alt="">
-              </div>
-              <p>Google <br>Analytics</p>
-            </li>
-            <li class="flex-c center">
-              <div class="flex-c center skill-set-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-gtagmanager.png" alt="">
-              </div>
-              <p>Google <br>Tag Manager</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+      <?php get_template_part('template-parts/my-specialization'); ?>
+      <?php get_template_part('template-parts/skillset'); ?>
   </section>
   <section id="project" class="fade-in">
     <div class="contents-inner">
