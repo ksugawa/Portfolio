@@ -7,8 +7,8 @@
 
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post();
-                    $cat = get_the_category();
-                    $cat = $cat[0];
+                    // $cat = get_the_category();
+                    // $cat = $cat[0];
                 ?>
 
                     <div class="blog-item">
