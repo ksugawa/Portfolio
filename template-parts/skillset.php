@@ -63,7 +63,7 @@
           <div class="flex-c center skill-set-logo">
             <img src="<?= get_template_directory_uri() ?>/assets/images/<?= $dev["icon"] ?>" alt="アイコン">
           </div>
-          <p class="txt_en font-w-700"><?= $dev["name"] ?></p>
+          <p><?= $dev["name"] ?></p>
         </li>
       <?php endforeach; ?>
     </ul>

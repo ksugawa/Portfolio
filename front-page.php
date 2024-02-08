@@ -29,9 +29,9 @@
           Web Developer
         </p>
         <div class="flex-r desc">
-          <p class="txt_en w-58">Starting from goal-setting for problem-solving, I utilize a wide range of skills to provide total support for web projects.I have extensive experience in creating and refurbishing various types of websites, including corporate sites and service sites.In design production, I consistently represent the brand image and build a strong visual identity.</p>
+          <p class="txt_en w-58">Starting from goal-setting, provide total support for web projects utilizing a wide range of skills. I have extensive experience in creating websites and developing web applications. In design production, I consistently represent the brand image and build a strong visual identity.</p>
           <p class="paragraph_jp">
-            幅広いスキルを駆使し、課題とゴール設定から、Webプロジェクトをトータルサポートします。コーポレートサイトやサービスサイトなど、さまざまなタイプのWebサイトの制作と改修を行っています。デザイン制作においては、 ブランドイメージを一貫して表現し強力なビジュアルアイデンティティを構築します。
+            幅広いスキルを駆使し、課題とゴール設定から、Webプロジェクトをトータルサポートします。Webサイト制作や保守運用、Webアプリ等の開発を行っていきます。デザイン制作においては、ブランドイメージを一貫して表現し強力なビジュアルアイデンティティを構築します。
           </p>
         </div>
       </div>

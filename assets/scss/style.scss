@@ -726,17 +726,16 @@ home-body
       }
       @keyframes infinity-scroll-left {
         from {
-            transform: translateX(0);
+          transform: translateX(0);
         }
-    
+
         to {
-            transform: translateX(-100%);
+          transform: translateX(-100%);
         }
       }
     }
   }
 }
-
 
 /*project
 ================================*/
@@ -981,24 +980,27 @@ textarea::-webkit-input-placeholder {
 single-page 
 ================================*/
 
-article {
-  width: 60vw;
-  margin: 0 auto;
-  padding: 5vw 0;
-  min-width: 840px;
-  line-height: 2;
-}
-
 .single-contents {
   margin: 10% 0;
   padding-left: 7vw;
   padding-right: 7vw;
-}
-
-article h2 {
-  font-size: max(1.5625rem, 18px);
-  font-weight: 500;
-  margin: 2% 0;
+  article {
+    width: 60vw;
+    margin: 0 auto;
+    padding: 5vw 0;
+    min-width: 840px;
+    line-height: 2;
+    h2 {
+      font-size: max(1.5625em, 20px);
+      margin: 2% 0;
+    }
+    h3 {
+      font-size: max(1.29em, 18px);
+    }
+    td,th {
+      border: 1px solid #cdcdcd !important;
+    }
+  }
 }
 
 .item-info__url {
