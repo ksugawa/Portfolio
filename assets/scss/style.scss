@@ -654,7 +654,7 @@ home-body
   }
 
   #skill-set {
-    ul {
+    #skill-set-head {
       li {
         cursor: pointer;
         position: relative;
@@ -996,9 +996,22 @@ single-page
     }
     h3 {
       font-size: max(1.29em, 18px);
+      margin: 0.65rem 0;
     }
-    td,th {
+    td,
+    th {
       border: 1px solid #cdcdcd !important;
+    }
+    code {
+      background: #f2f1f1;
+      border-radius: 0.25rem;
+      margin: 2rem 0;
+      padding: 2rem 1rem;
+      overflow-x: auto;
+    }
+    ul {
+      list-style: disc;
+      margin-left: 1rem;
     }
   }
 }

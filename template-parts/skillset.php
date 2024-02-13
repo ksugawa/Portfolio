@@ -3,7 +3,7 @@
     <p class="txt_en font-38 font-w-700" id="text-target">Skill Set</p>
     <p>スキル</p>
   </div>
-  <ul class="flex-r border-b a-center t-center mb-4">
+  <ul class="flex-r border-b a-center t-center mb-4" id="skill-set-head">
     <li id="skill-set-design">
       <div>
         <p class="txt_en font-w-700">Web Design</p>
