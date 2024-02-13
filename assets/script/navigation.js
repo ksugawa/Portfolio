@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", function () {
+export default function Nav() {
   const navBtn = document.querySelector(".navbtn");
   const navbtnLines = document.querySelectorAll(".navbtn > span");
   const menu = document.querySelector(".menu");
@@ -30,6 +30,4 @@ window.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", handleNavScroll);
   navBtn.addEventListener("click", toggleMenu);
-});
-
-export default {};
+};

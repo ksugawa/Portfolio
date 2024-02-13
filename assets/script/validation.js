@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", function () {
+export default function Validation() {
   if (window.location.pathname === "/") {
     const form = document.getElementById("form");
     const username = document.getElementById("username");
@@ -76,6 +76,4 @@ window.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-});
-
-export default {};
+};

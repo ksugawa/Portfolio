@@ -510,6 +510,7 @@ home-body
   overflow: hidden;
 
   a {
+    width: 100%;
     color: #333;
     position: relative;
     display: inline-block;
@@ -746,6 +747,7 @@ home-body
 }
 
 #project .item {
+  width: 5%;
   position: relative;
   margin-right: 15rem;
 
@@ -1385,6 +1387,7 @@ thanks
   }
 
   .main-container a {
+    width: 100%;
     color: #262626;
     position: relative;
     display: inline-block;

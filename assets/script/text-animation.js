@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", function () {
+export default function textAnimation() {
   const textTarget = document.getElementById("text-target");
 
   if (textTarget) {
@@ -28,6 +28,4 @@ window.addEventListener("DOMContentLoaded", function () {
     }
     window.addEventListener("scroll", startTextAnimationOnScroll);
   }
-});
-
-export default {};
+};

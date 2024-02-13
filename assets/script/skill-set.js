@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", function () {
+export default function skillSet() {
   const skillCards = [
     document.getElementById("skill-card_design"),
     document.getElementById("skill-card_develop"),
@@ -39,6 +39,4 @@ window.addEventListener("DOMContentLoaded", function () {
       skillSets[index].style.display = "block";
     });
   });
-});
-
-export default {};
+};
