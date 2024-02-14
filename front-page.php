@@ -1,5 +1,6 @@
-<?php get_header(); ?>
+<?php require('constant.php') ?>
 
+<?php get_header(); ?>
 <div class="topimage">
   <div class="fv-center flex-c center">
     <div class="flex-r w-60">
@@ -64,22 +65,13 @@
           </div>
           <div>
             <ul class="sns-icon-list flex-r">
-              <?php
-              $sns_link = [
-                'github' => "https://github.com/ksugawa",
-                'linkedIn' => "https://www.linkedin.com/in/ksugawa",
-              ];
-              ?>
-              <li>
-                <a href=<?php echo $sns_link['github'] ?>>
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-github.svg" alt="">
-                </a>
-              </li>
-              <li>
-                <a href=<?php echo $sns_link['linkedIn'] ?>>
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-linkedin.svg" alt="">
-                </a>
-              </li>
+              <?php foreach ($sns_links as $sns_link) : ?>
+                <li>
+                  <a href="<?= $sns_link['link'] ?>">
+                    <img src="<?= $sns_link['icon'] ?>" alt="SNSアイコン">
+                  </a>
+                </li>
+              <?php endforeach; ?>
             </ul>
           </div>
         </div>
@@ -90,5 +82,4 @@
     </div>
   </section>
 </main>
-
 <?php get_footer(); ?>

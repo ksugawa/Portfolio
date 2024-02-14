@@ -1,3 +1,5 @@
+<?php require('constant.php')?>
+
 <!doctype html>
 <html>
 
@@ -33,10 +35,13 @@
             <div class="sitetitle">
                 <nav class="menu">
                     <ul>
-                        <li><a href="<?php echo esc_url(home_url('/')); ?>">HOME</a></li>
-                        <li><a href="<?php echo esc_url(home_url('/')); ?>work/">WORK</a></li>
-                        <li><a href="<?php echo esc_url(home_url('/')); ?>blog/">BLOG</a></li>
-                        <li><a href="<?php echo esc_url(home_url('/')); ?>other/">OTHER</a></li>
+                        <?php foreach ($nav_menus as $nav_menu) : ?>
+                        <li>
+                            <a href="<?= $nav_menu['link'] ?>">
+                                <?= $nav_menu['name'] ?>
+                            </a>
+                        </li>
+                        <?php endforeach; ?>
                     </ul>
                 </nav>
                 <div class="navbtn"><span></span><span></span><span></span></div>

@@ -1,7 +1,7 @@
 <?php
 $sectionTitle = [
-    'title_2' => 'My Specialization',
-    'sub_title_2' => '提供できるもの',
+  'title_2' => 'My Specialization',
+  'sub_title_2' => '提供できるもの',
 ];
 ?>
 
@@ -36,22 +36,22 @@ $sectionTitle = [
       ];
       ?>
       <?php foreach ($skills as $skill) : ?>
-      <li id="<?= $skill['id'] ?>" class="card">
-        <div class="flex-c center card-front">
-          <div class="card-icon">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?= $skill['icon'] ?>" alt="アイコン">
+        <li id="<?= $skill['id'] ?>" class="card">
+          <div class="flex-c center card-front">
+            <div class="card-icon">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?= $skill['icon'] ?>" alt="アイコン">
+            </div>
+            <div>
+              <?php foreach ($skill['titles'] as $title) : ?>
+                <p class="txt_en font-w-700"><?= $title ?></p>
+              <?php endforeach; ?>
+            </div>
           </div>
-          <div>
-            <?php foreach ($skill['titles'] as $title) : ?>
-            <p class="txt_en font-w-700"><?= $title ?></p>
-            <?php endforeach; ?>
+          <div class="flex-c center card-inner">
+            <p class="txt_en font-w-700 font-48"><?= $skill['count'] ?></p>
+            <p class="txt_en font-w-700">Project</p>
           </div>
-        </div>
-        <div class="flex-c center card-inner">
-          <p class="txt_en font-w-700 font-48"><?= $skill['count'] ?></p>
-          <p class="txt_en font-w-700">Project</p>
-        </div>
-      </li>
+        </li>
       <?php endforeach; ?>
     </ul>
   </div>
