@@ -1,6 +1,7 @@
 <?php
 /* ---------- サムネイル画像設定 ---------- */
-function setup_theme() {
+function setup_theme()
+{
     add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'setup_theme');
@@ -44,34 +45,35 @@ function create_post_type()
         'blog-cat',
         'blog',
         array(
-          'label' => 'カテゴリー',
-          'hierarchical' => true,
-          'public' => true,
-          'show_in_rest' => true,
+            'label' => 'カテゴリー',
+            'hierarchical' => true,
+            'public' => true,
+            'show_in_rest' => true,
         )
-      );
-    
-      register_taxonomy(
+    );
+
+    register_taxonomy(
         'blog-tag',
         'blog',
         array(
-          'label' => 'タグ',
-          'hierarchical' => false,
-          'public' => true,
-          'show_in_rest' => true,
-          'update_count_callback' => '_update_post_term_count',
+            'label' => 'タグ',
+            'hierarchical' => false,
+            'public' => true,
+            'show_in_rest' => true,
+            'update_count_callback' => '_update_post_term_count',
         )
-      );
+    );
 }
 add_action('init', 'create_post_type');
 
 /* ---------- メールフォームの実装 ---------- */
-function form_init() {
-    if ( is_home() ) {
+function form_init()
+{
+    if (is_home()) {
         return;
     }
 
-    if (isset($_POST['name'])){
+    if (isset($_POST['name'])) {
         $name = $_POST['name'];
         $email = $_POST['email'];
         $message = &$_POST['message'];
@@ -79,8 +81,8 @@ function form_init() {
         $to = "sugawakumiko.biz@gmail.com";
         $subject = "お問合せがありました";
         $body = "お名前 : \n{$name}\n";
-                "メールアドレス : \n{$email}\n";
-                "お問合せ内容 : \n{$message}\n";
+        "メールアドレス : \n{$email}\n";
+        "お問合せ内容 : \n{$message}\n";
         $fromname = "ポートフォリオサイト 須川 公美子";
         $from = "sugawakumiko.biz@gmail.com";
         $header = "From: {$fromname} <{$from}>\r\n";

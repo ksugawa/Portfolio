@@ -744,41 +744,61 @@ home-body
 #project-slider {
   flex: 0 0 auto;
   justify-content: flex-start;
-}
 
-#project .item {
-  width: 5%;
-  position: relative;
-  margin-right: 15rem;
-
-  &:nth-child(2n) {
-    margin-top: 7rem;
-  }
-
-  img {
+  .item {
+    width: 5%;
     position: relative;
-    width: 100%;
-    height: 216px;
-    object-fit: cover;
+    margin-right: 15rem;
+    transition: all 0.3s, opacity 0.3s;
+
+    .active {
+      animation-name: fadeLeftAnime;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+
+      @keyframes fadeLeftAnime {
+        from {
+          opacity: 0;
+          transform: translateX(-700px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+
+    &:nth-child(2n) {
+      margin-top: 7rem;
+    }
+
+    img {
+      position: relative;
+      width: 100%;
+      height: 216px;
+      object-fit: cover;
+    }
+
+    .item-info {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      z-index: 100;
+      opacity: 0;
+      transition: all 0.3s ease-in;
+    }
+
+    &:hover .item-info {
+      opacity: 1;
+    }
   }
 
-  .item-info {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    z-index: 100;
-    opacity: 0;
-    transition: all 0.3s ease-in;
+  .companyname {
+    color: #adb5bd;
+    font-size: 13px;
   }
-
-  &:hover .item-info {
-    opacity: 1;
-  }
-}
-
-.companyname {
-  color: #adb5bd;
-  font-size: 13px;
 }
 
 /*contact

@@ -31,7 +31,7 @@
     <div class="wrapper">
         <header class="header-container">
             <div class="sitetitle">
-                <nav class="menu collapse">
+                <nav class="menu">
                     <ul>
                         <li><a href="<?php echo esc_url(home_url('/')); ?>">HOME</a></li>
                         <li><a href="<?php echo esc_url(home_url('/')); ?>work/">WORK</a></li>
