@@ -64,13 +64,19 @@
           </div>
           <div>
             <ul class="sns-icon-list flex-r">
+              <?php
+              $sns_link = [
+                'github' => "https://github.com/ksugawa",
+                'linkedIn' => "https://www.linkedin.com/in/ksugawa",
+              ];
+              ?>
               <li>
-                <a href="https://github.com/ksugawa">
+                <a href=<?php echo $sns_link['github'] ?>>
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-github.svg" alt="">
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/ksugawa">
+                <a href=<?php echo $sns_link['linkedIn'] ?>>
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-linkedin.svg" alt="">
                 </a>
               </li>

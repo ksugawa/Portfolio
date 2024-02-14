@@ -1,7 +1,14 @@
+<?php
+$sectionTitle = [
+    'title_2' => 'My Specialization',
+    'sub_title_2' => '提供できるもの',
+];
+?>
+
 <div id="my-specialization" class="w-46">
   <div class="mb-10">
-    <p class="txt_en font-38 font-w-700" id="text-target">My Specialization</p>
-    <p>提供できるもの</p>
+    <p class="txt_en font-38 font-w-700" id="text-target"><?= $sectionTitle['title_2'] ?></p>
+    <p><?= $sectionTitle['sub_title_2'] ?></p>
   </div>
   <div>
     <ul class="flex-r">
