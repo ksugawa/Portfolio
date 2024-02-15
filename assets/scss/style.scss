@@ -625,9 +625,8 @@ home-body
         left: 0;
         transform: translateY(-50%);
         .card-icon {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          width: 40%;
+          margin: 0 auto;
           min-height: 60px;
         }
       }

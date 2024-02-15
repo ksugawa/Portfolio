@@ -21,17 +21,8 @@
 </div>
 <main class="main-container">
   <?php get_template_part('template-parts/head-line'); ?>
-  <section id="aboutme" class="fade-in">
-    <div class="contents-inner flex-r">
-      <?php get_template_part('template-parts/about-me'); ?>
-    </div>
-  </section>
-  <section id="skill" class="fade-in">
-    <div class="contents-inner flex-r">
-      <?php get_template_part('template-parts/my-specialization'); ?>
-      <?php get_template_part('template-parts/skillset'); ?>
-    </div>
-  </section>
+  <?php get_template_part('template-parts/about-me'); ?>
+  <?php get_template_part('template-parts/skill'); ?>
   <section id="project" class="fade-in">
     <div class="contents-inner">
       <div class="flex-r">
