@@ -1,4 +1,26 @@
-<?php require('constant.php')?>
+<?php
+/*
+* ヘッダー／ナビメニュー
+*/
+$nav_menus = [
+    [
+        "name" => "HOME",
+        "link" => "/"
+    ],
+    [
+        "name" => "WORK",
+        "link" => "/work"
+    ],
+    [
+        "name" => "BLOG",
+        "link" => "/blog"
+    ],
+    [
+        "name" => "OTHER",
+        "link" => "/other"
+    ]
+];
+?>
 
 <!doctype html>
 <html>
