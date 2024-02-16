@@ -4,7 +4,7 @@
     <div class="main-container">
 
         <span class="caption font-playfair">Work</span>
-        <div class="work-lists">
+        <div class="lists">
 
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post();
@@ -12,7 +12,7 @@
                     $cat = $cat[0];
                 ?>
 
-                    <div class="work-item">
+                    <div class="item">
                         <a href="<?php the_permalink(); ?>">
                             <div class="work-item__img">
                                 <?php the_post_thumbnail(); ?>

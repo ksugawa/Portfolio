@@ -1086,70 +1086,73 @@ travel-body
 }
 
 /*================================
-work-body 
+archive 
 ================================*/
 
-.work-lists {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-}
+.page-main {
 
-.work-item {
-  width: calc(100% - 50px);
-  margin-top: 50px;
-
-  &:nth-child(2n) {
-    margin-top: 12rem;
+  .lists {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
   }
-}
-
-.work-item__img {
-  width: 100%;
-  aspect-ratio: 3 / 1.5;
-  position: relative;
-  overflow: hidden;
-}
-
-.ttlCol {
-  border-bottom: 1px solid var(--font-black);
-
-  h2 {
-    font-size: 2em;
+  .item {
+    width: calc(100% - 50px);
+    margin-top: 50px;
+  
+    &:nth-child(2n) {
+      margin-top: 12rem;
+    }
   }
-}
-
-.ttl {
-  padding-top: 5px;
-
-  .txt {
-    display: flex;
-    font-size: 12px;
-    justify-content: space-between;
-  }
-}
-
-.txt p {
-  padding-top: 6px;
-
-  &.tag {
+  .work-item__img {
+    width: 100%;
+    aspect-ratio: 3 / 1.5;
     position: relative;
-    padding-right: 16px;
+    overflow: hidden;
+  }
+  
+  .ttlCol {
+    border-bottom: 1px solid var(--font-black);
+  
+    h2 {
+      font-size: 2em;
+    }
+  }
+  
+  .ttl {
+    padding-top: 5px;
+  
+    .txt {
+      display: flex;
+      font-size: 12px;
+      justify-content: space-between;
+    }
+  }
+  
+  .txt p {
+    padding-top: 6px;
+  
+    &.tag {
+      position: relative;
+      padding-right: 16px;
+    }
+  }
+  
+  .tag {
+    position: relative;
+  }
+  
+  .txt p.day {
+    padding-left: 16px;
+  }
+  
+  .ttl h4 {
+    margin: 0 0 20px 0;
+    font-size: 1.75rem;
   }
 }
 
-.tag {
-  position: relative;
-}
 
-.txt p.day {
-  padding-left: 16px;
-}
-
-.ttl h4 {
-  margin: 0 0 20px 0;
-  font-size: 1.75rem;
-}
 
 /*================================
 thanks 
@@ -1254,7 +1257,6 @@ thanks
     letter-spacing: 0.05rem;
   }
 
-  section,
   .page-main {
     padding: 10% 4%;
   }
@@ -1515,32 +1517,31 @@ thanks
   /*================================
     work-body 
   ================================*/
-
-  .work-lists {
-    grid-template-columns: 100% 1fr;
-    padding-right: 5px;
-    padding-left: 5px;
-  }
-
-  .work-item {
-    width: 100%;
-  }
+.page-main {
 
   .lists {
-    max-width: 100%;
-    flex: 0 0 100%;
-    margin-top: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .txt {
-    padding: 1px 0;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    grid-template-columns: 1fr;
+    padding-right: 5px;
+    padding-left: 5px;
+    .item {
+      margin-top: 0;
+      flex: 0 0 100%;
+      width: 100%;
+      &:nth-child(2n) {
+        margin-top: auto;
+      }
+      .txt {
+        padding: 1px 0;
+      }
+    }
   }
 
   #contact .contents-inner .flex-r {
     flex-wrap: wrap;
   }
+}
 }
 
 @media screen and (max-width: 500px) {
